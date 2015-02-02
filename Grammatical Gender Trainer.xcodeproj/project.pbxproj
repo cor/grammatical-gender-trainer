@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF89C6ED1A800E3B0011E38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */; };
+		AF89C6EF1A800E3B0011E38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EE1A800E3B0011E38E /* ViewController.swift */; };
+		AF89C6F21A800E3B0011E38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89C6F01A800E3B0011E38E /* Main.storyboard */; };
+		AF89C6F41A800E3B0011E38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89C6F31A800E3B0011E38E /* Images.xcassets */; };
+		AF89C6F71A800E3B0011E38E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89C6F51A800E3B0011E38E /* LaunchScreen.xib */; };
+		AF89C7031A800E3B0011E38E /* Grammatical_Gender_TrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7021A800E3B0011E38E /* Grammatical_Gender_TrainerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF89C6FD1A800E3B0011E38E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF89C6DF1A800E3B0011E38E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF89C6E61A800E3B0011E38E;
+			remoteInfo = "Grammatical Gender Trainer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF89C6E71A800E3B0011E38E /* Grammatical Gender Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grammatical Gender Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF89C6EB1A800E3B0011E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF89C6EE1A800E3B0011E38E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF89C6F11A800E3B0011E38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF89C6F31A800E3B0011E38E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF89C6F61A800E3B0011E38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AF89C6FC1A800E3B0011E38E /* Grammatical Gender TrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Grammatical Gender TrainerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF89C7011A800E3B0011E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF89C7021A800E3B0011E38E /* Grammatical_Gender_TrainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grammatical_Gender_TrainerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF89C6E41A800E3B0011E38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF89C6F91A800E3B0011E38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF89C6DE1A800E3B0011E38E = {
+			isa = PBXGroup;
+			children = (
+				AF89C6E91A800E3B0011E38E /* Grammatical Gender Trainer */,
+				AF89C6FF1A800E3B0011E38E /* Grammatical Gender TrainerTests */,
+				AF89C6E81A800E3B0011E38E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF89C6E81A800E3B0011E38E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF89C6E71A800E3B0011E38E /* Grammatical Gender Trainer.app */,
+				AF89C6FC1A800E3B0011E38E /* Grammatical Gender TrainerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF89C6E91A800E3B0011E38E /* Grammatical Gender Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */,
+				AF89C6EE1A800E3B0011E38E /* ViewController.swift */,
+				AF89C6F01A800E3B0011E38E /* Main.storyboard */,
+				AF89C6F31A800E3B0011E38E /* Images.xcassets */,
+				AF89C6F51A800E3B0011E38E /* LaunchScreen.xib */,
+				AF89C6EA1A800E3B0011E38E /* Supporting Files */,
+			);
+			path = "Grammatical Gender Trainer";
+			sourceTree = "<group>";
+		};
+		AF89C6EA1A800E3B0011E38E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF89C6EB1A800E3B0011E38E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF89C6FF1A800E3B0011E38E /* Grammatical Gender TrainerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF89C7021A800E3B0011E38E /* Grammatical_Gender_TrainerTests.swift */,
+				AF89C7001A800E3B0011E38E /* Supporting Files */,
+			);
+			path = "Grammatical Gender TrainerTests";
+			sourceTree = "<group>";
+		};
+		AF89C7001A800E3B0011E38E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF89C7011A800E3B0011E38E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF89C6E61A800E3B0011E38E /* Grammatical Gender Trainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF89C7061A800E3B0011E38E /* Build configuration list for PBXNativeTarget "Grammatical Gender Trainer" */;
+			buildPhases = (
+				AF89C6E31A800E3B0011E38E /* Sources */,
+				AF89C6E41A800E3B0011E38E /* Frameworks */,
+				AF89C6E51A800E3B0011E38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Grammatical Gender Trainer";
+			productName = "Grammatical Gender Trainer";
+			productReference = AF89C6E71A800E3B0011E38E /* Grammatical Gender Trainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF89C6FB1A800E3B0011E38E /* Grammatical Gender TrainerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF89C7091A800E3B0011E38E /* Build configuration list for PBXNativeTarget "Grammatical Gender TrainerTests" */;
+			buildPhases = (
+				AF89C6F81A800E3B0011E38E /* Sources */,
+				AF89C6F91A800E3B0011E38E /* Frameworks */,
+				AF89C6FA1A800E3B0011E38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF89C6FE1A800E3B0011E38E /* PBXTargetDependency */,
+			);
+			name = "Grammatical Gender TrainerTests";
+			productName = "Grammatical Gender TrainerTests";
+			productReference = AF89C6FC1A800E3B0011E38E /* Grammatical Gender TrainerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF89C6DF1A800E3B0011E38E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jurriaan Pruijs";
+				TargetAttributes = {
+					AF89C6E61A800E3B0011E38E = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					AF89C6FB1A800E3B0011E38E = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = AF89C6E61A800E3B0011E38E;
+					};
+				};
+			};
+			buildConfigurationList = AF89C6E21A800E3B0011E38E /* Build configuration list for PBXProject "Grammatical Gender Trainer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF89C6DE1A800E3B0011E38E;
+			productRefGroup = AF89C6E81A800E3B0011E38E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF89C6E61A800E3B0011E38E /* Grammatical Gender Trainer */,
+				AF89C6FB1A800E3B0011E38E /* Grammatical Gender TrainerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF89C6E51A800E3B0011E38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF89C6F21A800E3B0011E38E /* Main.storyboard in Resources */,
+				AF89C6F71A800E3B0011E38E /* LaunchScreen.xib in Resources */,
+				AF89C6F41A800E3B0011E38E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF89C6FA1A800E3B0011E38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF89C6E31A800E3B0011E38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF89C6EF1A800E3B0011E38E /* ViewController.swift in Sources */,
+				AF89C6ED1A800E3B0011E38E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF89C6F81A800E3B0011E38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF89C7031A800E3B0011E38E /* Grammatical_Gender_TrainerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF89C6FE1A800E3B0011E38E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF89C6E61A800E3B0011E38E /* Grammatical Gender Trainer */;
+			targetProxy = AF89C6FD1A800E3B0011E38E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF89C6F01A800E3B0011E38E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF89C6F11A800E3B0011E38E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF89C6F51A800E3B0011E38E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF89C6F61A800E3B0011E38E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF89C7041A800E3B0011E38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF89C7051A800E3B0011E38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF89C7071A800E3B0011E38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Grammatical Gender Trainer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AF89C7081A800E3B0011E38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Grammatical Gender Trainer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AF89C70A1A800E3B0011E38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Grammatical Gender TrainerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grammatical Gender Trainer.app/Grammatical Gender Trainer";
+			};
+			name = Debug;
+		};
+		AF89C70B1A800E3B0011E38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Grammatical Gender TrainerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grammatical Gender Trainer.app/Grammatical Gender Trainer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF89C6E21A800E3B0011E38E /* Build configuration list for PBXProject "Grammatical Gender Trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF89C7041A800E3B0011E38E /* Debug */,
+				AF89C7051A800E3B0011E38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF89C7061A800E3B0011E38E /* Build configuration list for PBXNativeTarget "Grammatical Gender Trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF89C7071A800E3B0011E38E /* Debug */,
+				AF89C7081A800E3B0011E38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF89C7091A800E3B0011E38E /* Build configuration list for PBXNativeTarget "Grammatical Gender TrainerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF89C70A1A800E3B0011E38E /* Debug */,
+				AF89C70B1A800E3B0011E38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF89C6DF1A800E3B0011E38E /* Project object */;
+}
