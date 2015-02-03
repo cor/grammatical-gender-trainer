@@ -13,12 +13,76 @@ class WrtsListXml
     let name : String
     let words : [Word]
     
-    init(url : String) {
+    class ParserDelegate : WrtsParserDelegate {
+        var words = [Word]()
+        var title : String?
+        
+        var language_a : Language?
+        var language_b : Language?
+        
+        var name : String?
+        var listUrls = [String]()
+        var groupUrls = [String]()
+        
+        func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
+            switch(elementName) {
+            case "lang-a": language_a = toLanguage(data)
+            case "lang-b": language_b = toLanguage(data)
+            case "word-a": processWordData(data, language: language_a)
+            case "word-b": processWordData(data, language: language_b)
+            default: break
+            }
+        }
+        
+        func processWordData(data: String, language: Language?) {
+            if let lang = language {
+                processWordData(data, language: lang)
+            }
+            
+        }
+        
+        func processWordData(data: String, language: Language) {
+            if let (word, gender) = split(data, language: language) {
+                words.append(SimpleWord(word: word, gender: gender, language: language))
+            }
+        }
+        
+        func split(data: String, language: Language) -> (String, Gender)? {
+            switch language {
+            case .German:
+                let parts = data.componentsSeparatedByString(" ")
+                if (parts.count >= 2) {
+                    let firstPart = parts[0].uppercaseStringWithLocale(language.locale)
+                    let wordParts = " ".join(parts[1..<parts.count])
+                    switch firstPart {
+                    case "DER": return (wordParts, Gender.Masculine)
+                    case "DIE": return (wordParts, Gender.Feminine)
+                    case "DAS": return (wordParts, Gender.Neuter)
+                    default: return nil
+                    }
+                } else {
+                    return nil
+                }
+            default: return nil
+            }
+        }
+    }
+   
+    init(connection: WrtsConnection, url: String) {
+        
+        let parserDelegate = ParserDelegate();
+        var xmlParser = NSXMLParser(data: connection.read(url))
+        xmlParser.delegate = parserDelegate
+        xmlParser.parse()
+        
         // load stuff
         
-        name = "Test List"
-        words = [
-            WrtsWord(text: "Woord 1", gender: Gender.Feminine, language: Language.Dutch),
-            WrtsWord(text: "Wurde 1", gender: Gender.Feminine, language: Language.German) ]
+        if (parserDelegate.title == nil) {
+            name = "Unknown"
+        } else {
+            name = parserDelegate.title!
+        }
+
+        words = parserDelegate.words
     }
 }

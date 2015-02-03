@@ -10,7 +10,7 @@ import Foundation
 
 protocol Word : Printable
 {
-    var text : String { get }
+    var word : String { get }
     var gender : Gender { get }
     var language : Language { get }
 }

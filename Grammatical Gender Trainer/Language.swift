@@ -21,6 +21,13 @@ enum Language : Printable
         }
     }
     
+    var locale : NSLocale {
+        switch self {
+        case .German: return NSLocale(localeIdentifier: "de")
+        case .Dutch: return NSLocale(localeIdentifier: "nl")
+        }
+    }
+    
     var description: String {
         switch self {
         case .German: return "German"

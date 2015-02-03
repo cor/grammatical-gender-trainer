@@ -10,22 +10,21 @@ import Foundation
 
 class WrtsSource : Source
 {
-    var user : String     // wrts@pruijs.nl
-    var password : String // uBq-eS8-nKs-d8p
-    let url = "http://www.wrts.nl/api"
+    let connection : WrtsConnection
     
-    init(user: String, password: String) {
-        self.user = user
-        self.password = password
+    init(username: String, password: String) {
+        connection = WrtsConnection(username: username, password: password)
     }
     
     var root : Group {
         get {
-            return WrtsGroup(url: url)
+            let source = WrtsUserData(connection: connection, url: "http://www.wrts.nl/api/lists")
+            
+            return SimpleGroup(name:"root", lists: source.lists, groups: source.groups)
         }
     }
     
     var description : String {
-        return "Wrts of \(user)"
+        return "Wrts of \(connection.username)"
     }
 }

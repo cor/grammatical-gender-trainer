@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */; };
 		AF89C6ED1A800E3B0011E38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */; };
 		AF89C6EF1A800E3B0011E38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EE1A800E3B0011E38E /* ViewController.swift */; };
 		AF89C6F21A800E3B0011E38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89C6F01A800E3B0011E38E /* Main.storyboard */; };
@@ -20,11 +21,12 @@
 		AF89C7151A800FF80011E38E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7141A800FF80011E38E /* Language.swift */; };
 		AF89C7171A8010520011E38E /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7161A8010520011E38E /* Gender.swift */; };
 		AF89C7191A8011A60011E38E /* WrtsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7181A8011A60011E38E /* WrtsSource.swift */; };
-		AF89C71B1A8013620011E38E /* WrtsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71A1A8013620011E38E /* WrtsGroup.swift */; };
-		AF89C71D1A8014370011E38E /* WrtsGroupXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71C1A8014370011E38E /* WrtsGroupXml.swift */; };
+		AF89C71B1A8013620011E38E /* SimpleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71A1A8013620011E38E /* SimpleGroup.swift */; };
+		AF89C71D1A8014370011E38E /* WrtsUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71C1A8014370011E38E /* WrtsUserData.swift */; };
 		AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71E1A80ACC60011E38E /* WrtsList.swift */; };
 		AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7201A80AD880011E38E /* WrtsListXml.swift */; };
-		AF89C7231A80ADCB0011E38E /* WrtsWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7221A80ADCB0011E38E /* WrtsWord.swift */; };
+		AF89C7231A80ADCB0011E38E /* SimpleWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7221A80ADCB0011E38E /* SimpleWord.swift */; };
+		AFEB16B91A80BBB1001AB439 /* WrtsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsParserDelegate.swift; sourceTree = "<group>"; };
 		AF89C6E71A800E3B0011E38E /* Grammatical Gender Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grammatical Gender Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF89C6EB1A800E3B0011E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,11 +58,12 @@
 		AF89C7141A800FF80011E38E /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		AF89C7161A8010520011E38E /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		AF89C7181A8011A60011E38E /* WrtsSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsSource.swift; sourceTree = "<group>"; };
-		AF89C71A1A8013620011E38E /* WrtsGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsGroup.swift; sourceTree = "<group>"; };
-		AF89C71C1A8014370011E38E /* WrtsGroupXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsGroupXml.swift; sourceTree = "<group>"; };
+		AF89C71A1A8013620011E38E /* SimpleGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGroup.swift; sourceTree = "<group>"; };
+		AF89C71C1A8014370011E38E /* WrtsUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsUserData.swift; sourceTree = "<group>"; };
 		AF89C71E1A80ACC60011E38E /* WrtsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsList.swift; sourceTree = "<group>"; };
 		AF89C7201A80AD880011E38E /* WrtsListXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsListXml.swift; sourceTree = "<group>"; };
-		AF89C7221A80ADCB0011E38E /* WrtsWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsWord.swift; sourceTree = "<group>"; };
+		AF89C7221A80ADCB0011E38E /* SimpleWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWord.swift; sourceTree = "<group>"; };
+		AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +115,13 @@
 				AF89C7141A800FF80011E38E /* Language.swift */,
 				AF89C7161A8010520011E38E /* Gender.swift */,
 				AF89C7181A8011A60011E38E /* WrtsSource.swift */,
-				AF89C71A1A8013620011E38E /* WrtsGroup.swift */,
-				AF89C71C1A8014370011E38E /* WrtsGroupXml.swift */,
+				AF89C71A1A8013620011E38E /* SimpleGroup.swift */,
+				AF89C71C1A8014370011E38E /* WrtsUserData.swift */,
 				AF89C71E1A80ACC60011E38E /* WrtsList.swift */,
 				AF89C7201A80AD880011E38E /* WrtsListXml.swift */,
-				AF89C7221A80ADCB0011E38E /* WrtsWord.swift */,
+				AF89C7221A80ADCB0011E38E /* SimpleWord.swift */,
+				AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */,
+				AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */,
 			);
 			path = "Grammatical Gender Trainer";
 			sourceTree = "<group>";
@@ -254,10 +260,12 @@
 				AF89C7151A800FF80011E38E /* Language.swift in Sources */,
 				AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */,
 				AF89C7191A8011A60011E38E /* WrtsSource.swift in Sources */,
-				AF89C71B1A8013620011E38E /* WrtsGroup.swift in Sources */,
-				AF89C71D1A8014370011E38E /* WrtsGroupXml.swift in Sources */,
+				AFEB16B91A80BBB1001AB439 /* WrtsConnection.swift in Sources */,
+				AF89C71B1A8013620011E38E /* SimpleGroup.swift in Sources */,
+				AF89C71D1A8014370011E38E /* WrtsUserData.swift in Sources */,
 				AF89C7171A8010520011E38E /* Gender.swift in Sources */,
-				AF89C7231A80ADCB0011E38E /* WrtsWord.swift in Sources */,
+				AF89C7231A80ADCB0011E38E /* SimpleWord.swift in Sources */,
+				AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */,
 				AF89C7111A800F450011E38E /* Group.swift in Sources */,
 				AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */,
 				AF89C70D1A800E870011E38E /* List.swift in Sources */,
@@ -455,6 +463,7 @@
 				AF89C7081A800E3B0011E38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF89C7091A800E3B0011E38E /* Build configuration list for PBXNativeTarget "Grammatical Gender TrainerTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +472,7 @@
 				AF89C70B1A800E3B0011E38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

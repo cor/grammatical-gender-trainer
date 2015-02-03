@@ -10,15 +10,17 @@ import Foundation
 
 class WrtsList : List
 {
+    let connection : WrtsConnection
     let url : String
-    var xml : WrtsListXml { return WrtsListXml(url: url) }
+    var xml : WrtsListXml { return WrtsListXml(connection: connection, url: url) }
+    let name : String
     
-    var name : String { return xml.name }
     var words : [Word] { return xml.words }
-
     
-    init(url : String) {
+    init(connection: WrtsConnection, url: String, name: String) {
+        self.connection = connection
         self.url = url
+        self.name = name
     }
     
     var description : String { return "\(url)" }

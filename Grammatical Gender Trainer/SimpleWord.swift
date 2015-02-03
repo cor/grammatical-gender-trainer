@@ -8,17 +8,17 @@
 
 import Foundation
 
-class WrtsWord : Word
+class SimpleWord : Word
 {
-    var text: String
+    var word: String
     var gender: Gender
     var language: Language
 
-    init(text: String, gender: Gender, language: Language) {
-        self.text = text
+    init(word: String, gender: Gender, language: Language) {
+        self.word = word
         self.gender = gender
         self.language = language
     }
     
-    var description : String { return "\(text) (\(language))" }
+    var description : String { return "\(word) (\(gender))" }
 }
