@@ -12,6 +12,8 @@ class WrtsConnection : NSObject, Printable, NSURLConnectionDataDelegate
 {
     let username : String     // wrts@pruijs.nl
     let password : String // uBq-eS8-nKs-d8p
+    
+    var name: String { return "Wrts - \(username)" }
 
     init(username: String, password: String) {
         self.username = username
@@ -56,5 +58,7 @@ class WrtsConnection : NSObject, Printable, NSURLConnectionDataDelegate
     override var description : String {
         return "Wrts connection for \(username)"
     }
+    
+
 
 }

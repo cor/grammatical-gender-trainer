@@ -14,8 +14,15 @@ class WrtsList : List
     let url : String
     var xml : WrtsListXml { return WrtsListXml(connection: connection, url: url) }
     let name : String
+    var cachedWords : [Word]?
     
-    var words : [Word] { return xml.words }
+    var words : [Word] {
+        if cachedWords == nil {
+            cachedWords = xml.words
+        }
+        
+        return cachedWords!
+    }
     
     init(connection: WrtsConnection, url: String, name: String) {
         self.connection = connection

@@ -20,7 +20,7 @@ class WrtsSource : Source
         get {
             let source = WrtsUserData(connection: connection, url: "http://www.wrts.nl/api/lists")
             
-            return SimpleGroup(name:"root", lists: source.lists, groups: source.groups)
+            return SimpleGroup(name:connection.name, lists: source.lists, groups: source.groups)
         }
     }
     
