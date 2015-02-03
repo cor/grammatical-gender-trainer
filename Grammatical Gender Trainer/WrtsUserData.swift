@@ -87,12 +87,15 @@ class WrtsUserData
                 currentList = nil
                 states.removeLast()
             case "group":
-                if (!currentGroup.childGroups.isEmpty || !currentGroup.childLists.isEmpty) {
-                    currentGroup.childGroups.append(SimpleGroup(name: currentGroup.name!, lists: currentGroup.childLists, groups: currentGroup.childGroups))
-                }
+                
+                var newGroup = SimpleGroup(name: currentGroup.name!, lists: currentGroup.childLists, groups: currentGroup.childGroups)
                 
                 states.removeLast()
                 groups.removeLast()
+
+                if (!newGroup.groups.isEmpty || !newGroup.lists.isEmpty) {
+                    currentGroup.childGroups.append(newGroup)
+                }
             default: break
             }
             

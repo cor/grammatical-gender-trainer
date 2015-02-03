@@ -30,9 +30,9 @@ class ViewController: UIViewController {
         var text = ""
         text += "\(indent)List '\(list.name):'\n"
         
-        for word in list.words {
-            text += "  \(indent)\(word)\n"
-        }
+//        for word in list.words {
+//            text += "  \(indent)\(word)\n"
+//        }
         
         return text
     }
