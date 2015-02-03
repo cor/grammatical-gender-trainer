@@ -13,6 +13,18 @@
 		AF89C6F41A800E3B0011E38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89C6F31A800E3B0011E38E /* Images.xcassets */; };
 		AF89C6F71A800E3B0011E38E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89C6F51A800E3B0011E38E /* LaunchScreen.xib */; };
 		AF89C7031A800E3B0011E38E /* Grammatical_Gender_TrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7021A800E3B0011E38E /* Grammatical_Gender_TrainerTests.swift */; };
+		AF89C70D1A800E870011E38E /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C70C1A800E870011E38E /* List.swift */; };
+		AF89C70F1A800EB80011E38E /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C70E1A800EB80011E38E /* Source.swift */; };
+		AF89C7111A800F450011E38E /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7101A800F450011E38E /* Group.swift */; };
+		AF89C7131A800FCA0011E38E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7121A800FCA0011E38E /* Word.swift */; };
+		AF89C7151A800FF80011E38E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7141A800FF80011E38E /* Language.swift */; };
+		AF89C7171A8010520011E38E /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7161A8010520011E38E /* Gender.swift */; };
+		AF89C7191A8011A60011E38E /* WrtsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7181A8011A60011E38E /* WrtsSource.swift */; };
+		AF89C71B1A8013620011E38E /* WrtsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71A1A8013620011E38E /* WrtsGroup.swift */; };
+		AF89C71D1A8014370011E38E /* WrtsGroupXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71C1A8014370011E38E /* WrtsGroupXml.swift */; };
+		AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71E1A80ACC60011E38E /* WrtsList.swift */; };
+		AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7201A80AD880011E38E /* WrtsListXml.swift */; };
+		AF89C7231A80ADCB0011E38E /* WrtsWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7221A80ADCB0011E38E /* WrtsWord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,18 @@
 		AF89C6FC1A800E3B0011E38E /* Grammatical Gender TrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Grammatical Gender TrainerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF89C7011A800E3B0011E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF89C7021A800E3B0011E38E /* Grammatical_Gender_TrainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grammatical_Gender_TrainerTests.swift; sourceTree = "<group>"; };
+		AF89C70C1A800E870011E38E /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		AF89C70E1A800EB80011E38E /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		AF89C7101A800F450011E38E /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		AF89C7121A800FCA0011E38E /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		AF89C7141A800FF80011E38E /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		AF89C7161A8010520011E38E /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		AF89C7181A8011A60011E38E /* WrtsSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsSource.swift; sourceTree = "<group>"; };
+		AF89C71A1A8013620011E38E /* WrtsGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsGroup.swift; sourceTree = "<group>"; };
+		AF89C71C1A8014370011E38E /* WrtsGroupXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsGroupXml.swift; sourceTree = "<group>"; };
+		AF89C71E1A80ACC60011E38E /* WrtsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsList.swift; sourceTree = "<group>"; };
+		AF89C7201A80AD880011E38E /* WrtsListXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsListXml.swift; sourceTree = "<group>"; };
+		AF89C7221A80ADCB0011E38E /* WrtsWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsWord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +101,21 @@
 		AF89C6E91A800E3B0011E38E /* Grammatical Gender Trainer */ = {
 			isa = PBXGroup;
 			children = (
-				AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */,
 				AF89C6EE1A800E3B0011E38E /* ViewController.swift */,
 				AF89C6F01A800E3B0011E38E /* Main.storyboard */,
-				AF89C6F31A800E3B0011E38E /* Images.xcassets */,
-				AF89C6F51A800E3B0011E38E /* LaunchScreen.xib */,
 				AF89C6EA1A800E3B0011E38E /* Supporting Files */,
+				AF89C70C1A800E870011E38E /* List.swift */,
+				AF89C70E1A800EB80011E38E /* Source.swift */,
+				AF89C7101A800F450011E38E /* Group.swift */,
+				AF89C7121A800FCA0011E38E /* Word.swift */,
+				AF89C7141A800FF80011E38E /* Language.swift */,
+				AF89C7161A8010520011E38E /* Gender.swift */,
+				AF89C7181A8011A60011E38E /* WrtsSource.swift */,
+				AF89C71A1A8013620011E38E /* WrtsGroup.swift */,
+				AF89C71C1A8014370011E38E /* WrtsGroupXml.swift */,
+				AF89C71E1A80ACC60011E38E /* WrtsList.swift */,
+				AF89C7201A80AD880011E38E /* WrtsListXml.swift */,
+				AF89C7221A80ADCB0011E38E /* WrtsWord.swift */,
 			);
 			path = "Grammatical Gender Trainer";
 			sourceTree = "<group>";
@@ -90,6 +123,9 @@
 		AF89C6EA1A800E3B0011E38E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF89C6F31A800E3B0011E38E /* Images.xcassets */,
+				AF89C6F51A800E3B0011E38E /* LaunchScreen.xib */,
+				AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */,
 				AF89C6EB1A800E3B0011E38E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,8 +248,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF89C70F1A800EB80011E38E /* Source.swift in Sources */,
 				AF89C6EF1A800E3B0011E38E /* ViewController.swift in Sources */,
 				AF89C6ED1A800E3B0011E38E /* AppDelegate.swift in Sources */,
+				AF89C7151A800FF80011E38E /* Language.swift in Sources */,
+				AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */,
+				AF89C7191A8011A60011E38E /* WrtsSource.swift in Sources */,
+				AF89C71B1A8013620011E38E /* WrtsGroup.swift in Sources */,
+				AF89C71D1A8014370011E38E /* WrtsGroupXml.swift in Sources */,
+				AF89C7171A8010520011E38E /* Gender.swift in Sources */,
+				AF89C7231A80ADCB0011E38E /* WrtsWord.swift in Sources */,
+				AF89C7111A800F450011E38E /* Group.swift in Sources */,
+				AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */,
+				AF89C70D1A800E870011E38E /* List.swift in Sources */,
+				AF89C7131A800FCA0011E38E /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

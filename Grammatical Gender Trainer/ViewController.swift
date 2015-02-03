@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let source: Source = WrtsSource(user: "wrts@pruijs.nl", password: "uBq-eS8-nKs-d8p")
+    
+    @IBOutlet weak var data: UITextView!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var text = ""
+        
+        text += "\(source.description)\n"
+        text += "\(source.root.description)\n"
+
+        for list in source.root.lists {
+            text += "\(list)\n"
+            
+            for word in list.words {
+                text += "\(word)\n"
+            }
+        }
+        
+        data.text = text
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
