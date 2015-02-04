@@ -34,4 +34,16 @@ enum Language : Printable
         case .Dutch: return "Dutch"
         }
     }
+    
+    func genderName(gender: Gender) -> String {
+        switch self {
+        case .German:
+            switch gender {
+            case .Masculine: return "Der"
+            case .Feminine: return "Die"
+            case .Neuter: return "Das"
+            }
+        default: return gender.description
+        }
+    }
 }

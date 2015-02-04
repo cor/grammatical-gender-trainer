@@ -102,6 +102,13 @@ class GameController: UIViewController
     func updateDisplay() {
         switch state {
         case .Initial:
+            
+            currentWordLabel.text = ""
+            
+            masculineButton.setTitle("", forState: UIControlState.Normal)
+            feminineButton.setTitle("", forState: UIControlState.Normal)
+            neuterButton.setTitle("", forState: UIControlState.Normal)
+
             roundLabel.hidden = true
             timeLabel.hidden = true
             scoreLabel.hidden = true
@@ -110,6 +117,13 @@ class GameController: UIViewController
             feminineButton.enabled = false
             neuterButton.enabled = false
         case .Game:
+            
+            currentWordLabel.text = currentWord.word
+            
+            masculineButton.setTitle(currentWord.language.genderName(Gender.Masculine), forState: UIControlState.Normal)
+            feminineButton.setTitle(currentWord.language.genderName(Gender.Feminine), forState: UIControlState.Normal)
+            neuterButton.setTitle(currentWord.language.genderName(Gender.Neuter), forState: UIControlState.Normal)
+
             roundLabel.hidden = false
             timeLabel.hidden = false
             scoreLabel.hidden = false
@@ -117,9 +131,13 @@ class GameController: UIViewController
             masculineButton.enabled = true
             feminineButton.enabled = true
             neuterButton.enabled = true
-
-            currentWordLabel.text = currentWord.word
         case .Result:
+            currentWordLabel.text = ""
+            
+            masculineButton.setTitle("", forState: UIControlState.Normal)
+            feminineButton.setTitle("", forState: UIControlState.Normal)
+            neuterButton.setTitle("", forState: UIControlState.Normal)
+
             roundLabel.hidden = false
             timeLabel.hidden = false
             scoreLabel.hidden = false
