@@ -25,6 +25,8 @@ class GameController: UIViewController
     var score = 0
     var round = 1
     var state = State.Initial
+    var startTime : NSDate?
+    var endTime : NSDate?
     
     @IBOutlet weak var splashView: UIView!
 
@@ -56,6 +58,8 @@ class GameController: UIViewController
         super.viewDidLoad()
         
         title = gameTitle
+        
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateTimeLabel"), userInfo: nil, repeats: true)
         
         updateDisplay()
     }
@@ -93,6 +97,8 @@ class GameController: UIViewController
         
         score = 0
         round = 1
+        startTime = NSDate()
+        endTime = nil
 
         initRound(words)
 
@@ -151,6 +157,29 @@ class GameController: UIViewController
         scoreLabel.text = "\(score)"
     }
     
+    func updateTimeLabel() {
+        timeLabel.text = String(format: timeFormat(), time())
+    }
+    
+    func timeFormat() -> String {
+        switch state {
+        case .Game: return "%.1f"
+        default: return "%.5f"
+        }
+    }
+    
+    func time() -> Double {
+        if let startTime = startTime {
+            if let endTime = endTime {
+                return endTime.timeIntervalSinceDate(startTime)
+            } else {
+                return NSDate().timeIntervalSinceDate(startTime)
+            }
+        } else {
+            return 0.0
+        }
+    }
+    
     func nextWord() {
         currentWordIndex++
         
@@ -161,6 +190,8 @@ class GameController: UIViewController
     
     func nextRound() {
         if (nextRoundWords.isEmpty) {
+            endTime = NSDate()
+            
             state = .Result
         } else {
             round++
