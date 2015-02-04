@@ -18,6 +18,8 @@ class WordListController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = list.name
     }
 
     // UITableViewDataSource methods

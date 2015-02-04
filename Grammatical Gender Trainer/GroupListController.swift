@@ -24,7 +24,7 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
         
         //self.group = WrtsSource(username: "wrts@pruijs.nl", password: "uBq-eS8-nKs-d8p").root
         self.group = WrtsSource(username: "qlpc@q8p.nl", password: "School5ucks4Lyfe").root
-        self.navigationController?.navigationItem.title = group.name
+        title = group.name
     }
 
     // UITableViewDataSource methods
