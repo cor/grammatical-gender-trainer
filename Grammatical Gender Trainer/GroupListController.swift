@@ -27,7 +27,7 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
         title = group.name
     }
 
-    // UITableViewDataSource methods
+    // MARK: UITableViewDataSource methods
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return group.groups.count + 1
@@ -64,7 +64,7 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
         //            }
     }
     
-    // UITableViewDelegate methods
+    // MARK: UITableViewDelegate methods
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {

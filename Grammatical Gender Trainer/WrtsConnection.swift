@@ -21,7 +21,7 @@ class WrtsConnection : NSObject, Printable, NSURLConnectionDataDelegate
     }
     
     func read(url: String) -> NSData {
-        println("read  \(url)")
+        // println("read  \(url)")
         
         // set up the base64-encoded credentials
         let loginString = NSString(format: "%@:%@", username, password)
@@ -43,7 +43,7 @@ class WrtsConnection : NSObject, Printable, NSURLConnectionDataDelegate
         var dataVal: NSData =  NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error:nil)!
         var err: NSError
 
-        println(NSString(data:dataVal, encoding:NSUTF8StringEncoding))
+        // println(NSString(data:dataVal, encoding:NSUTF8StringEncoding))
         
         return dataVal
     }

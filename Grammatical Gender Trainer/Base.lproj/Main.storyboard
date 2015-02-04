@@ -201,15 +201,49 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsX-A4-Pzk">
+                                <rect key="frame" x="0.0" y="101" width="600" height="499"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auj-Sz-QqS">
+                                        <rect key="frame" x="20" y="20" width="560" height="226"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="start" destination="BFX-wD-hjK" eventType="touchUpInside" id="wyC-ay-cmM"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spacer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E3-6O-C1m">
+                                        <rect key="frame" x="20" y="254" width="560" height="225"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Auj-Sz-QqS" secondAttribute="trailing" constant="20" symbolic="YES" id="46G-6G-ZXk"/>
+                                    <constraint firstItem="1E3-6O-C1m" firstAttribute="height" secondItem="Auj-Sz-QqS" secondAttribute="height" id="4O3-Sa-l9f"/>
+                                    <constraint firstItem="1E3-6O-C1m" firstAttribute="top" secondItem="Auj-Sz-QqS" secondAttribute="bottom" constant="8" symbolic="YES" id="GS5-9S-IJz"/>
+                                    <constraint firstItem="Auj-Sz-QqS" firstAttribute="leading" secondItem="wsX-A4-Pzk" secondAttribute="leading" constant="20" symbolic="YES" id="JTT-CT-haI"/>
+                                    <constraint firstItem="Auj-Sz-QqS" firstAttribute="top" secondItem="wsX-A4-Pzk" secondAttribute="top" constant="20" symbolic="YES" id="dvB-C6-YVS"/>
+                                    <constraint firstItem="1E3-6O-C1m" firstAttribute="leading" secondItem="wsX-A4-Pzk" secondAttribute="leading" constant="20" symbolic="YES" id="log-cM-HPS"/>
+                                    <constraint firstAttribute="trailing" secondItem="1E3-6O-C1m" secondAttribute="trailing" constant="20" symbolic="YES" id="qn2-jY-365"/>
+                                    <constraint firstAttribute="bottom" secondItem="1E3-6O-C1m" secondAttribute="bottom" constant="20" symbolic="YES" id="uVu-nt-lue"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Cvf-eA-jVb" firstAttribute="top" secondItem="wsX-A4-Pzk" secondAttribute="bottom" id="0v0-SU-LOh"/>
                             <constraint firstItem="mXT-pe-gpY" firstAttribute="leading" secondItem="KjQ-Mp-YiQ" secondAttribute="leadingMargin" id="1HF-H2-43m"/>
+                            <constraint firstItem="wsX-A4-Pzk" firstAttribute="top" secondItem="5ji-Z5-p88" secondAttribute="bottom" constant="37" id="4oi-Og-71u"/>
                             <constraint firstItem="Xgw-sf-rek" firstAttribute="width" secondItem="Wae-QN-zL8" secondAttribute="width" id="578-Ih-y40"/>
                             <constraint firstItem="gae-ra-6eR" firstAttribute="height" secondItem="c9x-Ub-AZ2" secondAttribute="height" id="857-3S-RuZ"/>
                             <constraint firstItem="Xgw-sf-rek" firstAttribute="top" secondItem="5ji-Z5-p88" secondAttribute="bottom" constant="8" symbolic="YES" id="GpO-l9-yJj"/>
                             <constraint firstItem="gae-ra-6eR" firstAttribute="height" secondItem="Bk8-iq-Hhm" secondAttribute="height" id="HMw-kf-ebE"/>
                             <constraint firstItem="gae-ra-6eR" firstAttribute="top" secondItem="Xgw-sf-rek" secondAttribute="bottom" constant="8" symbolic="YES" id="IoC-d6-DNX"/>
+                            <constraint firstItem="Cvf-eA-jVb" firstAttribute="top" secondItem="wsX-A4-Pzk" secondAttribute="bottom" id="Jap-eo-20t"/>
                             <constraint firstItem="gae-ra-6eR" firstAttribute="height" secondItem="i63-3z-P4i" secondAttribute="height" id="KXe-ze-VNV"/>
                             <constraint firstItem="Xgw-sf-rek" firstAttribute="leading" secondItem="mXT-pe-gpY" secondAttribute="trailing" constant="8" symbolic="YES" id="LNm-ut-ezI"/>
                             <constraint firstItem="Wae-QN-zL8" firstAttribute="top" secondItem="5ji-Z5-p88" secondAttribute="bottom" constant="8" id="RyL-DS-bbm"/>
@@ -221,15 +255,22 @@
                             <constraint firstItem="mXT-pe-gpY" firstAttribute="width" secondItem="Xgw-sf-rek" secondAttribute="width" id="bwZ-jc-OEd"/>
                             <constraint firstItem="c9x-Ub-AZ2" firstAttribute="top" secondItem="gae-ra-6eR" secondAttribute="bottom" constant="8" symbolic="YES" id="g1g-FN-ztC"/>
                             <constraint firstItem="gae-ra-6eR" firstAttribute="leading" secondItem="KjQ-Mp-YiQ" secondAttribute="leadingMargin" id="heq-sn-te6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wsX-A4-Pzk" secondAttribute="trailing" constant="-16" id="hjK-hR-idv"/>
                             <constraint firstItem="mXT-pe-gpY" firstAttribute="top" secondItem="5ji-Z5-p88" secondAttribute="bottom" constant="8" id="lmO-23-gdo"/>
                             <constraint firstItem="Cvf-eA-jVb" firstAttribute="top" secondItem="Bk8-iq-Hhm" secondAttribute="bottom" constant="20" id="lnj-IU-H7U"/>
                             <constraint firstItem="Bk8-iq-Hhm" firstAttribute="leading" secondItem="c9x-Ub-AZ2" secondAttribute="trailing" constant="8" symbolic="YES" id="nN4-E5-cZE"/>
                             <constraint firstItem="Cvf-eA-jVb" firstAttribute="top" secondItem="i63-3z-P4i" secondAttribute="bottom" constant="20" id="t5u-g8-G4A"/>
+                            <constraint firstItem="wsX-A4-Pzk" firstAttribute="leading" secondItem="KjQ-Mp-YiQ" secondAttribute="leadingMargin" constant="-16" id="tUj-s2-75V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wae-QN-zL8" secondAttribute="trailing" constant="1" id="wPN-av-A1h"/>
                             <constraint firstItem="Cvf-eA-jVb" firstAttribute="top" secondItem="c9x-Ub-AZ2" secondAttribute="bottom" constant="20" id="whX-Qj-OmX"/>
                             <constraint firstItem="Wae-QN-zL8" firstAttribute="leading" secondItem="Xgw-sf-rek" secondAttribute="trailing" constant="8" symbolic="YES" id="xlZ-Le-IDt"/>
                             <constraint firstItem="i63-3z-P4i" firstAttribute="width" secondItem="c9x-Ub-AZ2" secondAttribute="width" id="yrt-yv-fBW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jap-eo-20t"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="currentWordLabel" destination="gae-ra-6eR" id="aOu-M7-z3f"/>
@@ -238,6 +279,7 @@
                         <outlet property="neuterButton" destination="Bk8-iq-Hhm" id="nLL-pb-rZH"/>
                         <outlet property="roundLabel" destination="mXT-pe-gpY" id="358-8K-nJH"/>
                         <outlet property="scoreLabel" destination="Wae-QN-zL8" id="HDL-U9-x06"/>
+                        <outlet property="splashView" destination="wsX-A4-Pzk" id="2Wl-JO-Ess"/>
                         <outlet property="timeLabel" destination="Xgw-sf-rek" id="iOH-N2-GpN"/>
                     </connections>
                 </viewController>

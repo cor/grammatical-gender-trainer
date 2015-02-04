@@ -26,6 +26,8 @@ class GameController: UIViewController
     var round = 1
     var state = State.Initial
     
+    @IBOutlet weak var splashView: UIView!
+
     enum State {
         case Initial, Game, Result
     }
@@ -55,17 +57,6 @@ class GameController: UIViewController
         
         title = gameTitle
         
-        start()
-    }
-    
-    func start() {
-        currentRoundWords = words
-        currentRoundWords.shuffle()
-        nextRoundWords = [Word]()
-        
-        score = 0
-        round = 1
-        
         updateDisplay()
     }
     
@@ -82,25 +73,64 @@ class GameController: UIViewController
     }
     
     func select(gender: Gender) {
-        
-        if (currentWord.gender == gender) {
-            score++
-        } else {
-            nextRoundWords.append(currentWord)
+        if (state == .Game) {
+            if (currentWord.gender == gender) {
+                score++
+            } else {
+                nextRoundWords.append(currentWord)
 
-            score--
+                score--
+            }
+            
+            nextWord()
+            
+            updateDisplay()
         }
+    }
+    
+    @IBAction func start() {
+        state = .Game
         
-        nextWord()
-        
+        score = 0
+        round = 1
+
+        initRound(words)
+
         updateDisplay()
     }
     
     func updateDisplay() {
+        switch state {
+        case .Initial:
+            roundLabel.hidden = true
+            timeLabel.hidden = true
+            scoreLabel.hidden = true
+            splashView.hidden = false
+            masculineButton.enabled = false
+            feminineButton.enabled = false
+            neuterButton.enabled = false
+        case .Game:
+            roundLabel.hidden = false
+            timeLabel.hidden = false
+            scoreLabel.hidden = false
+            splashView.hidden = true
+            masculineButton.enabled = true
+            feminineButton.enabled = true
+            neuterButton.enabled = true
+
+            currentWordLabel.text = currentWord.word
+        case .Result:
+            roundLabel.hidden = false
+            timeLabel.hidden = false
+            scoreLabel.hidden = false
+            splashView.hidden = false
+            masculineButton.enabled = false
+            feminineButton.enabled = false
+            neuterButton.enabled = false
+        }
+        
         roundLabel.text = "\(round)"
         scoreLabel.text = "\(score)"
-
-        currentWordLabel.text = currentWord.word
     }
     
     func nextWord() {
@@ -113,14 +143,19 @@ class GameController: UIViewController
     
     func nextRound() {
         if (nextRoundWords.isEmpty) {
-            currentRoundWords = words
-            
+            state = .Result
         } else {
-            currentRoundWords = nextRoundWords
+            round++
+
+            initRound(nextRoundWords)
         }
+    }
+    
+    func initRound(roundWords: [Word]) {
+        currentRoundWords = roundWords
         currentRoundWords.shuffle()
+        
         currentWordIndex = 0
         nextRoundWords = [Word]()
-        round++
     }
 }
