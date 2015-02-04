@@ -66,13 +66,6 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
     
     // UITableViewDelegate methods
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        
-        selectedList = listForIndexPath(indexPath)
-        
-        performSegueWithIdentifier(showListIdentifier, sender: self)
-    }
-    
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0: return nil
@@ -82,7 +75,12 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.destinationViewController {
-        case let wordListController as WordListController: wordListController.list = self.selectedList
+        case let wordListController as WordListController:
+            let path = tableView.indexPathForSelectedRow()!
+            
+            wordListController.list = listForIndexPath(path)
+            
+            tableView.deselectRowAtIndexPath(path, animated: false)
         default: break;
         }
     }
