@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0BF43E1A82975200C78C69 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BF43D1A82975200C78C69 /* GameController.swift */; };
 		AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */; };
 		AF89C6ED1A800E3B0011E38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */; };
 		AF89C6EF1A800E3B0011E38E /* GroupListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EE1A800E3B0011E38E /* GroupListController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF0BF43D1A82975200C78C69 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsParserDelegate.swift; sourceTree = "<group>"; };
 		AF89C6E71A800E3B0011E38E /* Grammatical Gender Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grammatical Gender Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF89C6EB1A800E3B0011E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				AF89C6EE1A800E3B0011E38E /* GroupListController.swift */,
 				AFFE93E91A816E7300769304 /* WordListController.swift */,
+				AF0BF43D1A82975200C78C69 /* GameController.swift */,
 				AF89C6F01A800E3B0011E38E /* Main.storyboard */,
 				AF89C6EA1A800E3B0011E38E /* Supporting Files */,
 				AF89C70C1A800E870011E38E /* List.swift */,
@@ -270,6 +273,7 @@
 				AF89C7171A8010520011E38E /* Gender.swift in Sources */,
 				AF89C7231A80ADCB0011E38E /* SimpleWord.swift in Sources */,
 				AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */,
+				AF0BF43E1A82975200C78C69 /* GameController.swift in Sources */,
 				AF89C7111A800F450011E38E /* Group.swift in Sources */,
 				AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */,
 				AF89C70D1A800E870011E38E /* List.swift in Sources */,

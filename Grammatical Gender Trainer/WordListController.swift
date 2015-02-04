@@ -39,4 +39,15 @@ class WordListController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        switch segue.destinationViewController {
+        case let gameController as GameController:
+
+            gameController.gameTitle = list.name
+            gameController.words = list.words
+        default: break
+        }
+    }
 }

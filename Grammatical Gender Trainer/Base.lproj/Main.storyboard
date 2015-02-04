@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPv-p1-1wM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-538" y="162"/>
+            <point key="canvasLocation" x="-464" y="237"/>
         </scene>
         <!--Title-->
         <scene sceneID="alR-gL-zG4">
@@ -124,7 +124,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="PPo-el-KLf">
-                        <barButtonItem key="rightBarButtonItem" title="Play" id="IRe-MX-Fp6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Play" id="IRe-MX-Fp6">
+                            <connections>
+                                <segue destination="BFX-wD-hjK" kind="show" identifier="play" id="tvX-pE-hel"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="PqJ-xV-Bsj" id="LiZ-hl-uKh"/>
@@ -133,6 +137,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s2-32-E7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1174" y="237"/>
+        </scene>
+        <!--Game Controller-->
+        <scene sceneID="Wnh-LE-h9h">
+            <objects>
+                <viewController id="BFX-wD-hjK" customClass="GameController" customModule="Grammatical_Gender_Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ji-Z5-p88"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cvf-eA-jVb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KjQ-Mp-YiQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gae-ra-6eR">
+                                <rect key="frame" x="16" y="101" width="568" height="236"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i63-3z-P4i">
+                                <rect key="frame" x="16" y="345" width="184" height="235"/>
+                                <state key="normal" title="Masculine">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="masculine" destination="BFX-wD-hjK" eventType="touchUpInside" id="rzQ-Ml-HUM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9x-Ub-AZ2">
+                                <rect key="frame" x="208" y="345" width="184" height="235"/>
+                                <state key="normal" title="Feminine">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="feminine" destination="BFX-wD-hjK" eventType="touchUpInside" id="Aq4-kt-In6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk8-iq-Hhm">
+                                <rect key="frame" x="400" y="345" width="184" height="235"/>
+                                <state key="normal" title="Neuter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="neuter" destination="BFX-wD-hjK" eventType="touchUpInside" id="rnW-aJ-Z2t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXT-pe-gpY">
+                                <rect key="frame" x="16" y="72" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-QN-zL8">
+                                <rect key="frame" x="399" y="72" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgw-sf-rek">
+                                <rect key="frame" x="208" y="72" width="183" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mXT-pe-gpY" firstAttribute="leading" secondItem="KjQ-Mp-YiQ" secondAttribute="leadingMargin" id="1HF-H2-43m"/>
+                            <constraint firstItem="Xgw-sf-rek" firstAttribute="width" secondItem="Wae-QN-zL8" secondAttribute="width" id="578-Ih-y40"/>
+                            <constraint firstItem="gae-ra-6eR" firstAttribute="height" secondItem="c9x-Ub-AZ2" secondAttribute="height" id="857-3S-RuZ"/>
+                            <constraint firstItem="Xgw-sf-rek" firstAttribute="top" secondItem="5ji-Z5-p88" secondAttribute="bottom" constant="8" symbolic="YES" id="GpO-l9-yJj"/>
+                            <constraint firstItem="gae-ra-6eR" firstAttribute="height" secondItem="Bk8-iq-Hhm" secondAttribute="height" id="HMw-kf-ebE"/>
+                            <constraint firstItem="gae-ra-6eR" firstAttribute="top" secondItem="Xgw-sf-rek" secondAttribute="bottom" constant="8" symbolic="YES" id="IoC-d6-DNX"/>
+                            <constraint firstItem="gae-ra-6eR" firstAttribute="height" secondItem="i63-3z-P4i" secondAttribute="height" id="KXe-ze-VNV"/>
+                            <constraint firstItem="Xgw-sf-rek" firstAttribute="leading" secondItem="mXT-pe-gpY" secondAttribute="trailing" constant="8" symbolic="YES" id="LNm-ut-ezI"/>
+                            <constraint firstItem="Wae-QN-zL8" firstAttribute="top" secondItem="5ji-Z5-p88" secondAttribute="bottom" constant="8" id="RyL-DS-bbm"/>
+                            <constraint firstItem="i63-3z-P4i" firstAttribute="leading" secondItem="KjQ-Mp-YiQ" secondAttribute="leadingMargin" id="Tou-4W-xuW"/>
+                            <constraint firstItem="c9x-Ub-AZ2" firstAttribute="leading" secondItem="i63-3z-P4i" secondAttribute="trailing" constant="8" symbolic="YES" id="VCv-CK-foG"/>
+                            <constraint firstItem="gae-ra-6eR" firstAttribute="trailing" secondItem="KjQ-Mp-YiQ" secondAttribute="trailingMargin" id="VPI-5n-Yiw"/>
+                            <constraint firstItem="Bk8-iq-Hhm" firstAttribute="width" secondItem="c9x-Ub-AZ2" secondAttribute="width" id="YhI-6b-hPk"/>
+                            <constraint firstItem="Bk8-iq-Hhm" firstAttribute="trailing" secondItem="KjQ-Mp-YiQ" secondAttribute="trailingMargin" id="b3E-Ux-Eau"/>
+                            <constraint firstItem="mXT-pe-gpY" firstAttribute="width" secondItem="Xgw-sf-rek" secondAttribute="width" id="bwZ-jc-OEd"/>
+                            <constraint firstItem="c9x-Ub-AZ2" firstAttribute="top" secondItem="gae-ra-6eR" secondAttribute="bottom" constant="8" symbolic="YES" id="g1g-FN-ztC"/>
+                            <constraint firstItem="gae-ra-6eR" firstAttribute="leading" secondItem="KjQ-Mp-YiQ" secondAttribute="leadingMargin" id="heq-sn-te6"/>
+                            <constraint firstItem="mXT-pe-gpY" firstAttribute="top" secondItem="5ji-Z5-p88" secondAttribute="bottom" constant="8" id="lmO-23-gdo"/>
+                            <constraint firstItem="Cvf-eA-jVb" firstAttribute="top" secondItem="Bk8-iq-Hhm" secondAttribute="bottom" constant="20" id="lnj-IU-H7U"/>
+                            <constraint firstItem="Bk8-iq-Hhm" firstAttribute="leading" secondItem="c9x-Ub-AZ2" secondAttribute="trailing" constant="8" symbolic="YES" id="nN4-E5-cZE"/>
+                            <constraint firstItem="Cvf-eA-jVb" firstAttribute="top" secondItem="i63-3z-P4i" secondAttribute="bottom" constant="20" id="t5u-g8-G4A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wae-QN-zL8" secondAttribute="trailing" constant="1" id="wPN-av-A1h"/>
+                            <constraint firstItem="Cvf-eA-jVb" firstAttribute="top" secondItem="c9x-Ub-AZ2" secondAttribute="bottom" constant="20" id="whX-Qj-OmX"/>
+                            <constraint firstItem="Wae-QN-zL8" firstAttribute="leading" secondItem="Xgw-sf-rek" secondAttribute="trailing" constant="8" symbolic="YES" id="xlZ-Le-IDt"/>
+                            <constraint firstItem="i63-3z-P4i" firstAttribute="width" secondItem="c9x-Ub-AZ2" secondAttribute="width" id="yrt-yv-fBW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentWordLabel" destination="gae-ra-6eR" id="aOu-M7-z3f"/>
+                        <outlet property="feminineButton" destination="c9x-Ub-AZ2" id="nOh-0H-1xe"/>
+                        <outlet property="masculineButton" destination="i63-3z-P4i" id="JOG-Ff-tq6"/>
+                        <outlet property="neuterButton" destination="Bk8-iq-Hhm" id="nLL-pb-rZH"/>
+                        <outlet property="roundLabel" destination="mXT-pe-gpY" id="358-8K-nJH"/>
+                        <outlet property="scoreLabel" destination="Wae-QN-zL8" id="HDL-U9-x06"/>
+                        <outlet property="timeLabel" destination="Xgw-sf-rek" id="iOH-N2-GpN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1E-gP-VKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949" y="237"/>
         </scene>
     </scenes>
 </document>
