@@ -34,25 +34,41 @@ class Game {
     var startTime : NSDate?
     var endTime : NSDate?
     
+    var running = true
+    
     var remainingWords: Int {
         return wordStacks[currentRound].count
     }
     
     init(words: [Word]) {
         wordSource = words
+    }
+    
+    func start() {
+        running = true
+        
+        // clear the wordstacks and add a new, shuffeled wordstack containing all words
+        wordStacks = []
         wordStacks.append(wordSource.shuffled())
         
         nextWord()
+        startTime = NSDate()
+        endTime = nil
     }
     
-    private func nextWord() -> Word? {
+    func end() {
+        if running {
+            running = false
+            endTime = NSDate()
+        }
+    }
+    
+    private func nextWord() {
         
         if wordStacks[currentRound].count > 0 {
             currentWord = wordStacks[currentRound].removeLast()
-            return currentWord!
         } else {
-            println("ERROR: no new word available")
-            return nil
+            end()
         }
     }
     
@@ -66,7 +82,6 @@ class Game {
             }
             
         } else {
-            // TODO: add word to new stack
             score--
         }
     }
@@ -84,5 +99,6 @@ class Game {
             return 0.0
         }
     }
+    
     
 }
