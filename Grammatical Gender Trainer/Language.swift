@@ -39,9 +39,9 @@ enum Language : Printable
         switch self {
         case .German:
             switch gender {
-            case .Masculine: return "Der"
-            case .Feminine: return "Die"
-            case .Neuter: return "Das"
+            case .Masculine: return "der"
+            case .Feminine: return "die"
+            case .Neuter: return "das"
             }
         default: return gender.description
         }
