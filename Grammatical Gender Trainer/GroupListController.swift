@@ -29,12 +29,13 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
             
             let loadedGroup = WrtsSource(username: "qlpc@q8p.nl", password: "School5ucks4Lyfe").root
             //self.group = WrtsSource(username: "wrts@pruijs.nl", password: "uBq-eS8-nKs-d8p").root
-            self.group = loadedGroup
-            self.title = loadedGroup.name
             
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 
             dispatch_async(dispatch_get_main_queue()) {
+                self.group = loadedGroup
+                self.title = loadedGroup.name
+
                 self.tableView.reloadData()
             }
         }
@@ -89,13 +90,35 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.destinationViewController {
         case let gameController as GameController:
-            let path = tableView.indexPathForSelectedRow()!
-            
-            gameController.gameTitle = listForIndexPath(path).name
-            gameController.words = listForIndexPath(path).words
+            if let selectedList = self.selectedList {
+                gameController.words = selectedList.words
+                gameController.title = selectedList.name
+            }
         default: break;
         }
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let path = tableView.indexPathForSelectedRow()!
+        let loadingList = listForIndexPath(path)
+        
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            
+            loadingList.words
+            self.selectedList = loadingList
+
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+                self.performSegueWithIdentifier("game", sender: self)
+            }
+        }
+
+    }
+    
 /*
     func printList(list: List, indent: String) -> String {
         var text = ""

@@ -56,9 +56,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="BFX-wD-hjK" kind="show" identifier="quiz" id="qjO-Pu-wUJ"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -78,11 +75,12 @@
                     <navigationItem key="navigationItem" title="Title" id="SNU-yy-f9T"/>
                     <connections>
                         <outlet property="tableView" destination="0TG-mL-IXL" id="Tr5-ic-P6P"/>
+                        <segue destination="BFX-wD-hjK" kind="show" identifier="game" id="MHe-Su-v1x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chb-uk-7aK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435" y="237"/>
+            <point key="canvasLocation" x="411" y="237"/>
         </scene>
         <!--Game Controller-->
         <scene sceneID="Wnh-LE-h9h">
