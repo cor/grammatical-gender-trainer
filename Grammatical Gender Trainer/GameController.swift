@@ -163,8 +163,8 @@ class GameController: UIViewController
     
     func timeFormat() -> String {
         switch state {
-        case .Game: return "%.1f"
-        default: return "%.5f"
+        case .Result: return "%.2f"
+        default: return "%.1f"
         }
     }
     
