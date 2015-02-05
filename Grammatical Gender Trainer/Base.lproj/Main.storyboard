@@ -109,7 +109,6 @@
                                 </state>
                                 <connections>
                                     <action selector="genderButtonPressed:" destination="BFX-wD-hjK" eventType="touchUpInside" id="10K-EZ-5c7"/>
-                                    <action selector="masculine" destination="BFX-wD-hjK" eventType="touchUpInside" id="rzQ-Ml-HUM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Feminine" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9x-Ub-AZ2">
@@ -118,7 +117,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="feminine" destination="BFX-wD-hjK" eventType="touchUpInside" id="Aq4-kt-In6"/>
                                     <action selector="genderButtonPressed:" destination="BFX-wD-hjK" eventType="touchUpInside" id="vMB-EC-bBe"/>
                                 </connections>
                             </button>
@@ -129,7 +127,6 @@
                                 </state>
                                 <connections>
                                     <action selector="genderButtonPressed:" destination="BFX-wD-hjK" eventType="touchUpInside" id="zSQ-hx-yxW"/>
-                                    <action selector="neuter" destination="BFX-wD-hjK" eventType="touchUpInside" id="rnW-aJ-Z2t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXT-pe-gpY">
@@ -159,7 +156,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="start" destination="BFX-wD-hjK" eventType="touchUpInside" id="wyC-ay-cmM"/>
+                                            <action selector="startButtonPressed" destination="BFX-wD-hjK" eventType="touchUpInside" id="0aT-EU-rxj"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E3-6O-C1m">

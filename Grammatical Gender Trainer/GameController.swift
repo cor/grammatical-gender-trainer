@@ -56,43 +56,33 @@ class GameController: UIViewController {
         updateDisplay()
     }
     
-    // this should be replaced by one @IBAction
+    // MARK: Input
     
-    @IBAction func masculine() {
-        game.answer(Gender.Masculine)
-    }
-    
-    @IBAction func feminine() {
-        game.answer(Gender.Feminine)
-    }
-
-    @IBAction func neuter() {
-        game.answer(Gender.Neuter)
-    }
     @IBAction func genderButtonPressed(sender: UIButton) {
+        
         if let identifier = sender.restorationIdentifier {
             switch identifier {
-            case "Masculine":
-                game.answer(Gender.Masculine)
-            case "Feminine":
-                game.answer(Gender.Feminine)
-            case "Neuter":
-                game.answer(Gender.Neuter)
-            default:
-                println("ERROR: invalid Restoration Identifier")
+            case "Masculine": game.answer(Gender.Masculine)
+            case "Feminine": game.answer(Gender.Feminine)
+            case "Neuter": game.answer(Gender.Neuter)
+            default: println("ERROR: invalid Restoration Identifier")
             }
             
             updateDisplay()
         }
     }
     
-    
-    
-    @IBAction func start() {
+    @IBAction func startButtonPressed() {
         
         state = .Game
+        game.start()
         
         updateDisplay()
+        
+        // update the timer label 10 times per second second
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateTimeLabel"), userInfo: nil, repeats: true)
+        
+        
     }
     
     func updateDisplay() {
@@ -140,6 +130,7 @@ class GameController: UIViewController {
             neuterButton.enabled = true
             
             wordsLabel.text = ""
+            
             
         case .Result:
             currentWordLabel.text = ""

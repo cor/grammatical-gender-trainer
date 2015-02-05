@@ -41,8 +41,11 @@ class Game {
     init(words: [Word]) {
         wordSource = words
         wordStacks.append(wordSource.shuffled())
-        
+    }
+    
+    func start() {
         nextWord()
+        startTime = NSDate()
     }
     
     private func nextWord() -> Word? {
@@ -84,5 +87,6 @@ class Game {
             return 0.0
         }
     }
+    
     
 }
