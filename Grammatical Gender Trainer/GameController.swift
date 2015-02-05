@@ -41,6 +41,8 @@ class GameController: UIViewController
         return currentRoundWords[currentWordIndex]
     }
 
+    @IBOutlet weak var wordsLabel: UILabel!
+    
     // Score
     @IBOutlet weak var scoreLabel: UILabel!
     
@@ -101,7 +103,7 @@ class GameController: UIViewController
         endTime = nil
 
         initRound(words)
-
+        
         updateDisplay()
     }
     
@@ -122,6 +124,8 @@ class GameController: UIViewController
             masculineButton.enabled = false
             feminineButton.enabled = false
             neuterButton.enabled = false
+            
+            wordsLabel.text = words.description
         case .Game:
             
             currentWordLabel.text = currentWord.word
@@ -137,6 +141,8 @@ class GameController: UIViewController
             masculineButton.enabled = true
             feminineButton.enabled = true
             neuterButton.enabled = true
+            
+            wordsLabel.text = ""
         case .Result:
             currentWordLabel.text = ""
             
@@ -151,6 +157,8 @@ class GameController: UIViewController
             masculineButton.enabled = false
             feminineButton.enabled = false
             neuterButton.enabled = false
+            
+            wordsLabel.text = words.description
         }
         
         roundLabel.text = "\(round)"

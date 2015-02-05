@@ -75,12 +75,11 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.destinationViewController {
-        case let wordListController as WordListController:
+        case let gameController as GameController:
             let path = tableView.indexPathForSelectedRow()!
             
-            wordListController.list = listForIndexPath(path)
-            
-            tableView.deselectRowAtIndexPath(path, animated: false)
+            gameController.gameTitle = listForIndexPath(path).name
+            gameController.words = listForIndexPath(path).words
         default: break;
         }
     }

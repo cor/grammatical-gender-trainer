@@ -28,7 +28,6 @@
 		AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7201A80AD880011E38E /* WrtsListXml.swift */; };
 		AF89C7231A80ADCB0011E38E /* SimpleWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7221A80ADCB0011E38E /* SimpleWord.swift */; };
 		AFEB16B91A80BBB1001AB439 /* WrtsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */; };
-		AFFE93EA1A816E7300769304 /* WordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE93E91A816E7300769304 /* WordListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		AF89C7201A80AD880011E38E /* WrtsListXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsListXml.swift; sourceTree = "<group>"; };
 		AF89C7221A80ADCB0011E38E /* SimpleWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWord.swift; sourceTree = "<group>"; };
 		AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsConnection.swift; sourceTree = "<group>"; };
-		AFFE93E91A816E7300769304 /* WordListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				AF89C6EE1A800E3B0011E38E /* GroupListController.swift */,
-				AFFE93E91A816E7300769304 /* WordListController.swift */,
 				AF0BF43D1A82975200C78C69 /* GameController.swift */,
 				AF89C6F01A800E3B0011E38E /* Main.storyboard */,
 				AF89C6EA1A800E3B0011E38E /* Supporting Files */,
@@ -267,7 +264,6 @@
 				AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */,
 				AF89C7191A8011A60011E38E /* WrtsSource.swift in Sources */,
 				AFEB16B91A80BBB1001AB439 /* WrtsConnection.swift in Sources */,
-				AFFE93EA1A816E7300769304 /* WordListController.swift in Sources */,
 				AF89C71B1A8013620011E38E /* SimpleGroup.swift in Sources */,
 				AF89C71D1A8014370011E38E /* WrtsUserData.swift in Sources */,
 				AF89C7171A8010520011E38E /* Gender.swift in Sources */,
