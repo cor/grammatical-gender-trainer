@@ -86,6 +86,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87A396CD1A834BF5008EF080 /* Wrts */ = {
+			isa = PBXGroup;
+			children = (
+				AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */,
+				AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */,
+				AF89C7181A8011A60011E38E /* WrtsSource.swift */,
+				AF89C71C1A8014370011E38E /* WrtsUserData.swift */,
+				AF89C71E1A80ACC60011E38E /* WrtsList.swift */,
+				AF89C7201A80AD880011E38E /* WrtsListXml.swift */,
+			);
+			name = Wrts;
+			sourceTree = "<group>";
+		};
+		87A396CE1A834C15008EF080 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87A396CD1A834BF5008EF080 /* Wrts */,
+				AF89C70C1A800E870011E38E /* List.swift */,
+				AF89C70E1A800EB80011E38E /* Source.swift */,
+				AF89C7101A800F450011E38E /* Group.swift */,
+				AF89C7221A80ADCB0011E38E /* SimpleWord.swift */,
+				AF89C7121A800FCA0011E38E /* Word.swift */,
+				AF89C7141A800FF80011E38E /* Language.swift */,
+				AF89C71A1A8013620011E38E /* SimpleGroup.swift */,
+				AF89C7161A8010520011E38E /* Gender.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		87A396CF1A834C7F008EF080 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF89C6EE1A800E3B0011E38E /* GroupListController.swift */,
+				AF0BF43D1A82975200C78C69 /* GameController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		87A396D01A834C92008EF080 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF89C6F01A800E3B0011E38E /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		AF89C6DE1A800E3B0011E38E = {
 			isa = PBXGroup;
 			children = (
@@ -107,24 +153,10 @@
 		AF89C6E91A800E3B0011E38E /* Grammatical Gender Trainer */ = {
 			isa = PBXGroup;
 			children = (
-				AF89C6EE1A800E3B0011E38E /* GroupListController.swift */,
-				AF0BF43D1A82975200C78C69 /* GameController.swift */,
-				AF89C6F01A800E3B0011E38E /* Main.storyboard */,
+				87A396CE1A834C15008EF080 /* Model */,
+				87A396D01A834C92008EF080 /* View */,
+				87A396CF1A834C7F008EF080 /* Controller */,
 				AF89C6EA1A800E3B0011E38E /* Supporting Files */,
-				AF89C70C1A800E870011E38E /* List.swift */,
-				AF89C70E1A800EB80011E38E /* Source.swift */,
-				AF89C7101A800F450011E38E /* Group.swift */,
-				AF89C7121A800FCA0011E38E /* Word.swift */,
-				AF89C7141A800FF80011E38E /* Language.swift */,
-				AF89C7161A8010520011E38E /* Gender.swift */,
-				AF89C7181A8011A60011E38E /* WrtsSource.swift */,
-				AF89C71A1A8013620011E38E /* SimpleGroup.swift */,
-				AF89C71C1A8014370011E38E /* WrtsUserData.swift */,
-				AF89C71E1A80ACC60011E38E /* WrtsList.swift */,
-				AF89C7201A80AD880011E38E /* WrtsListXml.swift */,
-				AF89C7221A80ADCB0011E38E /* SimpleWord.swift */,
-				AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */,
-				AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */,
 			);
 			path = "Grammatical Gender Trainer";
 			sourceTree = "<group>";
