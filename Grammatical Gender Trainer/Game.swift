@@ -42,12 +42,18 @@ class Game {
     
     init(words: [Word]) {
         wordSource = words
-        wordStacks.append(wordSource.shuffled())
     }
     
     func start() {
+        running = true
+        
+        // clear the wordstacks and add a new, shuffeled wordstack containing all words
+        wordStacks = []
+        wordStacks.append(wordSource.shuffled())
+        
         nextWord()
         startTime = NSDate()
+        endTime = nil
     }
     
     func end() {
