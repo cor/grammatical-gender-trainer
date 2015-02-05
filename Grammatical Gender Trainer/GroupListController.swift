@@ -20,11 +20,24 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
+        self.group = SimpleGroup(name: "Loading...", lists: [List](), groups: [Group]())
+        self.title = "Loading..."
         
-        //self.group = WrtsSource(username: "wrts@pruijs.nl", password: "uBq-eS8-nKs-d8p").root
-        self.group = WrtsSource(username: "qlpc@q8p.nl", password: "School5ucks4Lyfe").root
-        title = group.name
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            
+            let loadedGroup = WrtsSource(username: "qlpc@q8p.nl", password: "School5ucks4Lyfe").root
+            //self.group = WrtsSource(username: "wrts@pruijs.nl", password: "uBq-eS8-nKs-d8p").root
+            self.group = loadedGroup
+            self.title = loadedGroup.name
+            
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: UITableViewDataSource methods
