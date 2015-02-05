@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87A396D21A83E0BD008EF080 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A396D11A83E0BD008EF080 /* Game.swift */; };
 		AF0BF43E1A82975200C78C69 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BF43D1A82975200C78C69 /* GameController.swift */; };
 		AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */; };
 		AF89C6ED1A800E3B0011E38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87A396D11A83E0BD008EF080 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		AF0BF43D1A82975200C78C69 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsParserDelegate.swift; sourceTree = "<group>"; };
 		AF89C6E71A800E3B0011E38E /* Grammatical Gender Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grammatical Gender Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 		87A396CE1A834C15008EF080 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				87A396D11A83E0BD008EF080 /* Game.swift */,
 				87A396CD1A834BF5008EF080 /* Wrts */,
 				AF89C70C1A800E870011E38E /* List.swift */,
 				AF89C70E1A800EB80011E38E /* Source.swift */,
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF89C70F1A800EB80011E38E /* Source.swift in Sources */,
+				87A396D21A83E0BD008EF080 /* Game.swift in Sources */,
 				AF89C6EF1A800E3B0011E38E /* GroupListController.swift in Sources */,
 				AF89C6ED1A800E3B0011E38E /* AppDelegate.swift in Sources */,
 				AF89C7151A800FF80011E38E /* Language.swift in Sources */,

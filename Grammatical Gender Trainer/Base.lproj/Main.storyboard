@@ -102,30 +102,33 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i63-3z-P4i">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Masculine" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i63-3z-P4i">
                                 <rect key="frame" x="16" y="345" width="184" height="235"/>
                                 <state key="normal" title="Masculine">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="genderButtonPressed:" destination="BFX-wD-hjK" eventType="touchUpInside" id="10K-EZ-5c7"/>
                                     <action selector="masculine" destination="BFX-wD-hjK" eventType="touchUpInside" id="rzQ-Ml-HUM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9x-Ub-AZ2">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Feminine" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9x-Ub-AZ2">
                                 <rect key="frame" x="208" y="345" width="184" height="235"/>
                                 <state key="normal" title="Feminine">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="feminine" destination="BFX-wD-hjK" eventType="touchUpInside" id="Aq4-kt-In6"/>
+                                    <action selector="genderButtonPressed:" destination="BFX-wD-hjK" eventType="touchUpInside" id="vMB-EC-bBe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk8-iq-Hhm">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Neuter" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk8-iq-Hhm">
                                 <rect key="frame" x="400" y="345" width="184" height="235"/>
                                 <state key="normal" title="Neuter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="genderButtonPressed:" destination="BFX-wD-hjK" eventType="touchUpInside" id="zSQ-hx-yxW"/>
                                     <action selector="neuter" destination="BFX-wD-hjK" eventType="touchUpInside" id="rnW-aJ-Z2t"/>
                                 </connections>
                             </button>

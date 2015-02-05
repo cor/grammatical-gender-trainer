@@ -17,29 +17,20 @@ extension Array {
     }
 }
 
-class GameController: UIViewController
-{
+class GameController: UIViewController {
+    
     var words : [Word]!
     var gameTitle : String!
-    var currentWordIndex = 0
-    var score = 0
-    var round = 1
     var state = State.Initial
-    var startTime : NSDate?
-    var endTime : NSDate?
     
-    @IBOutlet weak var splashView: UIView!
-
+    var game : Game!
+    
     enum State {
         case Initial, Game, Result
     }
     
-    var currentRoundWords : [Word] = [Word]()
-    var nextRoundWords : [Word] = [Word]()
     
-    var currentWord : Word {
-        return currentRoundWords[currentWordIndex]
-    }
+    @IBOutlet weak var splashView: UIView!
 
     @IBOutlet weak var wordsLabel: UILabel!
     
@@ -59,50 +50,47 @@ class GameController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        game = Game(words: words)
         title = gameTitle
-        
-        NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateTimeLabel"), userInfo: nil, repeats: true)
         
         updateDisplay()
     }
     
+    // this should be replaced by one @IBAction
+    
     @IBAction func masculine() {
-        select(Gender.Masculine)
+        game.answer(Gender.Masculine)
     }
     
     @IBAction func feminine() {
-        select(Gender.Feminine)
+        game.answer(Gender.Feminine)
     }
 
     @IBAction func neuter() {
-        select(Gender.Neuter)
+        game.answer(Gender.Neuter)
     }
-    
-    func select(gender: Gender) {
-        if (state == .Game) {
-            if (currentWord.gender == gender) {
-                score++
-            } else {
-                nextRoundWords.append(currentWord)
-
-                score--
+    @IBAction func genderButtonPressed(sender: UIButton) {
+        if let identifier = sender.restorationIdentifier {
+            switch identifier {
+            case "Masculine":
+                game.answer(Gender.Masculine)
+            case "Feminine":
+                game.answer(Gender.Feminine)
+            case "Neuter":
+                game.answer(Gender.Neuter)
+            default:
+                println("ERROR: invalid Restoration Identifier")
             }
-            
-            nextWord()
             
             updateDisplay()
         }
     }
     
+    
+    
     @IBAction func start() {
-        state = .Game
         
-        score = 0
-        round = 1
-        startTime = NSDate()
-        endTime = nil
-
-        initRound(words)
+        state = .Game
         
         updateDisplay()
     }
@@ -126,14 +114,23 @@ class GameController: UIViewController
             neuterButton.enabled = false
             
             wordsLabel.text = words.description
+            
+            
         case .Game:
             
-            currentWordLabel.text = currentWord.word
             
-            masculineButton.setTitle(currentWord.language.genderName(Gender.Masculine), forState: UIControlState.Normal)
-            feminineButton.setTitle(currentWord.language.genderName(Gender.Feminine), forState: UIControlState.Normal)
-            neuterButton.setTitle(currentWord.language.genderName(Gender.Neuter), forState: UIControlState.Normal)
+            if game.currentWord != nil {
+                
+                // update currentWord label
+                currentWordLabel.text = game.currentWord?.word
+                
+                // update answer buttons
+                masculineButton.setTitle(game.currentWord!.language.genderName(Gender.Masculine), forState: UIControlState.Normal)
+                feminineButton.setTitle(game.currentWord!.language.genderName(Gender.Feminine), forState: UIControlState.Normal)
+                neuterButton.setTitle(game.currentWord!.language.genderName(Gender.Neuter), forState: UIControlState.Normal)
+            }
 
+            // hide and show UI elements because we're now In Game
             roundLabel.hidden = false
             timeLabel.hidden = false
             scoreLabel.hidden = false
@@ -143,6 +140,7 @@ class GameController: UIViewController
             neuterButton.enabled = true
             
             wordsLabel.text = ""
+            
         case .Result:
             currentWordLabel.text = ""
             
@@ -161,12 +159,12 @@ class GameController: UIViewController
             wordsLabel.text = words.description
         }
         
-        roundLabel.text = "\(round)"
-        scoreLabel.text = "\(score)"
+        roundLabel.text = "\(42)"
+        scoreLabel.text = "\(game.score)"
     }
     
     func updateTimeLabel() {
-        timeLabel.text = String(format: timeFormat(), time())
+        timeLabel.text = String(format: timeFormat(), game.time())
     }
     
     func timeFormat() -> String {
@@ -176,43 +174,5 @@ class GameController: UIViewController
         }
     }
     
-    func time() -> Double {
-        if let startTime = startTime {
-            if let endTime = endTime {
-                return endTime.timeIntervalSinceDate(startTime)
-            } else {
-                return NSDate().timeIntervalSinceDate(startTime)
-            }
-        } else {
-            return 0.0
-        }
-    }
     
-    func nextWord() {
-        currentWordIndex++
-        
-        if (currentWordIndex == currentRoundWords.count) {
-            nextRound()
-        }
-    }
-    
-    func nextRound() {
-        if (nextRoundWords.isEmpty) {
-            endTime = NSDate()
-            
-            state = .Result
-        } else {
-            round++
-
-            initRound(nextRoundWords)
-        }
-    }
-    
-    func initRound(roundWords: [Word]) {
-        currentRoundWords = roundWords
-        currentRoundWords.shuffle()
-        
-        currentWordIndex = 0
-        nextRoundWords = [Word]()
-    }
 }
