@@ -34,6 +34,8 @@ class Game {
     var startTime : NSDate?
     var endTime : NSDate?
     
+    var running = true
+    
     var remainingWords: Int {
         return wordStacks[currentRound].count
     }
@@ -48,14 +50,19 @@ class Game {
         startTime = NSDate()
     }
     
-    private func nextWord() -> Word? {
+    func end() {
+        if running {
+            running = false
+            endTime = NSDate()
+        }
+    }
+    
+    private func nextWord() {
         
         if wordStacks[currentRound].count > 0 {
             currentWord = wordStacks[currentRound].removeLast()
-            return currentWord!
         } else {
-            println("ERROR: no new word available")
-            return nil
+            end()
         }
     }
     
@@ -69,7 +76,6 @@ class Game {
             }
             
         } else {
-            // TODO: add word to new stack
             score--
         }
     }

@@ -56,6 +56,11 @@ class GameController: UIViewController {
             default: println("ERROR: invalid Restoration Identifier")
             }
             
+            // this should be replaced by a delegate
+            if game.running == false {
+                state = .Result
+            }
+            
             updateDisplay()
         }
     }
