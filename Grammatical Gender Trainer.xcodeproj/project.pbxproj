@@ -28,6 +28,7 @@
 		AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C71E1A80ACC60011E38E /* WrtsList.swift */; };
 		AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7201A80AD880011E38E /* WrtsListXml.swift */; };
 		AF89C7231A80ADCB0011E38E /* SimpleWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C7221A80ADCB0011E38E /* SimpleWord.swift */; };
+		AFD72EE61A841503004BC7FE /* WrtsConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD72EE51A841503004BC7FE /* WrtsConnectionDelegate.swift */; };
 		AFEB16B91A80BBB1001AB439 /* WrtsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		AF89C71E1A80ACC60011E38E /* WrtsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsList.swift; sourceTree = "<group>"; };
 		AF89C7201A80AD880011E38E /* WrtsListXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsListXml.swift; sourceTree = "<group>"; };
 		AF89C7221A80ADCB0011E38E /* SimpleWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWord.swift; sourceTree = "<group>"; };
+		AFD72EE51A841503004BC7FE /* WrtsConnectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsConnectionDelegate.swift; sourceTree = "<group>"; };
 		AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEB16B81A80BBB1001AB439 /* WrtsConnection.swift */,
+				AFD72EE51A841503004BC7FE /* WrtsConnectionDelegate.swift */,
 				AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */,
 				AF89C7181A8011A60011E38E /* WrtsSource.swift */,
 				AF89C71C1A8014370011E38E /* WrtsUserData.swift */,
@@ -305,6 +308,7 @@
 				AF89C7171A8010520011E38E /* Gender.swift in Sources */,
 				AF89C7231A80ADCB0011E38E /* SimpleWord.swift in Sources */,
 				AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */,
+				AFD72EE61A841503004BC7FE /* WrtsConnectionDelegate.swift in Sources */,
 				AF0BF43E1A82975200C78C69 /* GameController.swift in Sources */,
 				AF89C7111A800F450011E38E /* Group.swift in Sources */,
 				AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */,

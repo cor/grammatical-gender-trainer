@@ -69,11 +69,9 @@ class WrtsListXml
     }
    
     init(connection: WrtsConnection, url: String) {
-        
         let parserDelegate = ParserDelegate();
-        var xmlParser = NSXMLParser(data: connection.read(url))
-        xmlParser.delegate = parserDelegate
-        xmlParser.parse()
+
+        connection.parse(connection, url: url, delegate: parserDelegate)
         
         // load stuff
         

@@ -8,53 +8,44 @@
 
 import Foundation
 
-class WrtsConnection : NSObject, Printable, NSURLConnectionDataDelegate
+class WrtsConnection : NSObject, Printable
 {
-    let username : String    // wrts@pruijs.nl
-    let password : String    // uBq-eS8-nKs-d8p
+    let username: String    // wrts@pruijs.nl
+    let password: String    // uBq-eS8-nKs-d8p
+    let protectionHost: String // "www.wrts.nl"
     
     var name: String { return "Wrts - \(username)" }
 
-    init(username: String, password: String) {
+    init(username: String, password: String, protectionHost: String) {
         self.username = username
         self.password = password
+        self.protectionHost = protectionHost
     }
     
-    func read(url: String) -> NSData {
-        // println("read  \(url)")
-        
-        // set up the base64-encoded credentials
-        let loginString = NSString(format: "%@:%@", username, password)
-        let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64LoginString = loginData.base64EncodedStringWithOptions(nil)
-        
-        // create the request
-        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-        request.HTTPMethod = "GET"
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-        
-        // fire off the request
-        // make sure your class conforms to NSURLConnectionDelegate
-        let urlConnection = NSURLConnection(request: request, delegate: self)
-        
-        
-        var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
-        var error: NSErrorPointer = nil
-        var dataVal: NSData =  NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error:nil)!
-        var err: NSError
-
-        // println(NSString(data:dataVal, encoding:NSUTF8StringEncoding))
-        
-        return dataVal
+    func read(url: String, delegate: NSURLConnectionDataDelegate) {
+        dispatch_async(dispatch_get_main_queue()) {
+            
+            // create the request
+            
+            var data = NSMutableData()
+            var url1: NSURL = NSURL(string: url)!
+            var request: NSURLRequest = NSURLRequest(URL: url1)
+            var connection: NSURLConnection = NSURLConnection(request: request, delegate: delegate, startImmediately: true)!
+            connection.start()
+        }
     }
+    
     
     func parse(connection: WrtsConnection, url: String, delegate: NSXMLParserDelegate) {
-        var xmlParser = NSXMLParser(data: read(url))
-        xmlParser.delegate = delegate
-        xmlParser.parse()
+        
+        var semaphore = dispatch_semaphore_create(0)
+        
+        self.read(url, delegate: WrtsConnectionDelegate(username: username, password: password, protectionHost: protectionHost, delegate: delegate, semaphore: semaphore))
+        
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
     }
-
     
+   
     override var description : String {
         return "Wrts connection for \(username)"
     }
