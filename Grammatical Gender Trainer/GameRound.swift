@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GameRound {
+class GameRound: Printable {
     
     // MARK - properties
     private var wordStack: [Word]
@@ -38,4 +38,17 @@ class GameRound {
     init(wordStack: [Word]) {
         self.wordStack = wordStack
     }
+
+    var description : String {
+    
+        var result: String = ""
+        var count = 0
+        for word in wordStack {
+            count++
+            result = result + ("\(count)\t\(word.language.genderName(word.gender)) \(word.word)\n")
+        }
+        
+        return result
+    }
+    
 }

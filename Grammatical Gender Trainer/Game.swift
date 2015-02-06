@@ -50,6 +50,8 @@ class Game {
         
         roundStack.append(GameRound(wordStack: wordSource.shuffled()))
         
+        println(roundStack[currentRound])
+        
         nextWord()
     }
     
