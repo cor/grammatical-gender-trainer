@@ -151,7 +151,7 @@ class GameController: UIViewController {
             splashView.hidden = false
         }
         
-        roundLabel.text = "\(42)"
+        roundLabel.text = "\(game.currentRound)"
         scoreLabel.text = "\(game.score)"
     }
     

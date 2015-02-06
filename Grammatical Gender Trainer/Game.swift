@@ -36,13 +36,19 @@ class Game {
     // MARK: - Controll Methods
     func start() {
         
-        running = true
+        // reset round stack
         roundStack = []
         
-        roundStack.append(GameRound(wordStack: wordSource.shuffled()))
+        // reset stat properties
+        currentRound = 0
+        currentWord = nil
+        score = 0
+        running = true
         
         startTime = NSDate()
         endTime = nil
+        
+        roundStack.append(GameRound(wordStack: wordSource.shuffled()))
         
         nextWord()
     }
@@ -59,10 +65,15 @@ class Game {
         if let word = roundStack[currentRound].nextWord() {
             currentWord = word
         } else {
-            end()
-            // TODO: Go to the next round
+            // if there's a new round available...
+            if roundStack.count == currentRound + 2 {
+                // ... then go to the next round
+                currentRound++
+                nextWord()
+            } else {
+                end()
+            }
         }
-        
     }
     
     func answer(answer: Gender) {

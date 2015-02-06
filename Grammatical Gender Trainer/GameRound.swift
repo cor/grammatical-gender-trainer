@@ -18,7 +18,6 @@ class GameRound {
     
     // MARK: - Public Methods
     func nextWord() -> Word? {
-        
         if wordStack.count > 0 {
             return wordStack.removeLast()
         } else {
