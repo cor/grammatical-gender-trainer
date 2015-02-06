@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		877A30331A84F341001FA406 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877A30321A84F341001FA406 /* GameRound.swift */; };
+		877A30361A84F6D4001FA406 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877A30351A84F6D4001FA406 /* ArrayExtension.swift */; };
 		87A396D21A83E0BD008EF080 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A396D11A83E0BD008EF080 /* Game.swift */; };
 		AF0BF43E1A82975200C78C69 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BF43D1A82975200C78C69 /* GameController.swift */; };
 		AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		877A30321A84F341001FA406 /* GameRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
+		877A30351A84F6D4001FA406 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		87A396D11A83E0BD008EF080 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		AF0BF43D1A82975200C78C69 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsParserDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		877A30341A84F3FB001FA406 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				87A396D11A83E0BD008EF080 /* Game.swift */,
+				877A30351A84F6D4001FA406 /* ArrayExtension.swift */,
+				877A30321A84F341001FA406 /* GameRound.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 		87A396CD1A834BF5008EF080 /* Wrts */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +121,7 @@
 		87A396CE1A834C15008EF080 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				87A396D11A83E0BD008EF080 /* Game.swift */,
+				877A30341A84F3FB001FA406 /* Game */,
 				87A396CD1A834BF5008EF080 /* Wrts */,
 				AF89C70C1A800E870011E38E /* List.swift */,
 				AF89C70E1A800EB80011E38E /* Source.swift */,
@@ -304,6 +318,7 @@
 				AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */,
 				AF89C7191A8011A60011E38E /* WrtsSource.swift in Sources */,
 				AFEB16B91A80BBB1001AB439 /* WrtsConnection.swift in Sources */,
+				877A30331A84F341001FA406 /* GameRound.swift in Sources */,
 				AF89C71B1A8013620011E38E /* SimpleGroup.swift in Sources */,
 				AF89C71D1A8014370011E38E /* WrtsUserData.swift in Sources */,
 				AF89C7171A8010520011E38E /* Gender.swift in Sources */,
@@ -315,6 +330,7 @@
 				AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */,
 				AF89C70D1A800E870011E38E /* List.swift in Sources */,
 				AF89C7131A800FCA0011E38E /* Word.swift in Sources */,
+				877A30361A84F6D4001FA406 /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

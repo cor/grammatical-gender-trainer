@@ -8,52 +8,43 @@
 
 import Foundation
 
-
-// array extension that returns an shuffled copy of an array,
-// this will be used to randomize the word order
-extension Array {
-    func shuffled() -> [T] {
-        var list = self
-        for i in 0..<(list.count - 1) {
-            let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
-            swap(&list[i], &list[j])
-        }
-        return list
-    }
-}
-
 class Game {
     
+    // MARK: - Stat Properties
     var currentRound = 0
     var currentWord: Word? = nil
     var score = 0
-    
-    let wordSource: [Word]
-    var wordStacks: [[Word]] = [[Word]]()
+    var running = true
     
     var startTime : NSDate?
     var endTime : NSDate?
     
-    var running = true
-    
     var remainingWords: Int {
-        return wordStacks[currentRound].count
+        return roundStack[currentRound].remainingWords
     }
     
+    // MARK: - Data Properties
+    let wordSource: [Word]
+    var roundStack: [GameRound]
+    
+    // MARK: - Initializers
     init(words: [Word]) {
         wordSource = words
+        roundStack = []
     }
     
+    // MARK: - Controll Methods
     func start() {
+        
         running = true
+        roundStack = []
         
-        // clear the wordstacks and add a new, shuffeled wordstack containing all words
-        wordStacks = []
-        wordStacks.append(wordSource.shuffled())
+        roundStack.append(GameRound(wordStack: wordSource.shuffled()))
         
-        nextWord()
         startTime = NSDate()
         endTime = nil
+        
+        nextWord()
     }
     
     func end() {
@@ -65,11 +56,13 @@ class Game {
     
     private func nextWord() {
         
-        if wordStacks[currentRound].count > 0 {
-            currentWord = wordStacks[currentRound].removeLast()
+        if let word = roundStack[currentRound].nextWord() {
+            currentWord = word
         } else {
             end()
+            // TODO: Go to the next round
         }
+        
     }
     
     func answer(answer: Gender) {
@@ -79,15 +72,23 @@ class Game {
             if answer == currentWord!.gender {
                 score++
                 nextWord()
+            } else {
+                
+                // create a new GameRound if ther isn't a next round available
+                if !(roundStack.count == currentRound + 2) {
+                    roundStack.append(GameRound())
+                }
+                
+                // add the incorrect word to the next round
+                roundStack[currentRound + 1].addWord(currentWord!)
+                score--
+                nextWord()
             }
             
-        } else {
-            score--
         }
     }
     
-    
-    // WIP method
+    // TODO: this method
     func time() -> Double {
         if let startTime = startTime {
             if let endTime = endTime {
@@ -99,6 +100,5 @@ class Game {
             return 0.0
         }
     }
-    
     
 }
