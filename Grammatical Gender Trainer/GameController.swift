@@ -52,19 +52,24 @@ class GameController: UIViewController {
         wordsView.editable = false
         wordsView.selectable = false
         
+        // fonts for the attributed string
+        let regularFont = UIFont(name: "Helvetica", size: 18.0)
+        let boldFont = UIFont(name: "Helvetica-Bold", size: 18.0)
+        
         // generate a list of words and put them in the wordsViews
         var wordsViewText = NSMutableAttributedString()
         
-        // fonts for the attributed string
-        let regularFont = UIFont(name: "Helvetica", size: 12.0)
-        let boldFont = UIFont(name: "Helvetica-Bold", size: 12.0)
-        
         for word in words {
             // generate the first line
-            var wordline = NSMutableAttributedString(string: "\(word.language.genderName(word.gender)) \(word.word) \n")
+            var wordline = NSMutableAttributedString(string: "\(word.language.genderName(word.gender))\t\(word.word)\n")
             
-            // make the first three characters bold
-            wordline.addAttribute(NSFontAttributeName, value: boldFont!, range: NSRange(location: 0, length: 3))
+            let genderNameLength = countElements(word.language.genderName(word.gender))
+            
+            // make the gender bold
+            wordline.addAttribute(NSFontAttributeName, value: boldFont!, range: NSRange(location: 0, length: genderNameLength ))
+            
+            // make the word non bold
+            wordline.addAttribute(NSFontAttributeName, value: regularFont!, range: NSRange(location: genderNameLength , length: (wordline.length - genderNameLength)))
             
             // add the string to the wordsViewText
             wordsViewText.appendAttributedString(wordline)
