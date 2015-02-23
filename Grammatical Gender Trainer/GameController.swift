@@ -8,27 +8,28 @@
 
 import UIKit
 
-class GameController: UIViewController {
+class GameController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var words : [Word]!
     var gameTitle : String!
     private var state = State.Initial
     private var game : Game!
     
+    
     enum State {
         case Initial, Game, Result
     }
     
-    
     @IBOutlet weak var splashView: UIView!
+    
     
     // MARK: Stat label outlets
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var currentWordLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-
     // Mark: Button outlets
     @IBOutlet weak var masculineButton: UIButton!
     @IBOutlet weak var feminineButton: UIButton!
@@ -36,6 +37,10 @@ class GameController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // table view setup
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.allowsSelection = false
         
         game = Game(words: words)
         title = gameTitle
@@ -85,6 +90,22 @@ class GameController: UIViewController {
         
         // update the timer label 10 times per second second
         NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateTimeLabel"), userInfo: nil, repeats: true)
+        
+    }
+    
+    
+    // MARK: TableView methods
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return game.wordSource.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        cell.textLabel?.text = game.wordSource[indexPath.row].word
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
     
