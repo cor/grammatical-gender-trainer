@@ -28,7 +28,6 @@ class GameController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var currentWordLabel: UILabel!
     
-    @IBOutlet weak var wordsView: UITextView!
 
     // Mark: Button outlets
     @IBOutlet weak var masculineButton: UIButton!
@@ -48,35 +47,11 @@ class GameController: UIViewController {
     
     func setupWordsView() {
         
-        // disable user input
-        wordsView.editable = false
-        wordsView.selectable = false
         
         // fonts for the attributed string
         let regularFont = UIFont(name: "Helvetica", size: 18.0)
         let boldFont = UIFont(name: "Helvetica-Bold", size: 18.0)
         
-        // generate a list of words and put them in the wordsViews
-        var wordsViewText = NSMutableAttributedString()
-        
-        for word in words {
-            // generate the first line
-            var wordline = NSMutableAttributedString(string: "\(word.language.genderName(word.gender))\t\(word.word)\n")
-            
-            let genderNameLength = countElements(word.language.genderName(word.gender))
-            
-            // make the gender bold
-            wordline.addAttribute(NSFontAttributeName, value: boldFont!, range: NSRange(location: 0, length: genderNameLength ))
-            
-            // make the word non bold
-            wordline.addAttribute(NSFontAttributeName, value: regularFont!, range: NSRange(location: genderNameLength , length: (wordline.length - genderNameLength)))
-            
-            // add the string to the wordsViewText
-            wordsViewText.appendAttributedString(wordline)
-        }
-        
-        // set the wordsViewText as the wordsView's text
-        wordsView.attributedText = wordsViewText
     }
     
     
@@ -143,7 +118,6 @@ class GameController: UIViewController {
             hideStatLabels(false)
             
             currentWordLabel.hidden = false
-            wordsView.hidden = true
             splashView.hidden = true
             
         case .Result:
@@ -152,7 +126,6 @@ class GameController: UIViewController {
             hideGenderButtons(true)
             
             currentWordLabel.hidden = true
-            wordsView.hidden = false
             splashView.hidden = false
         }
         

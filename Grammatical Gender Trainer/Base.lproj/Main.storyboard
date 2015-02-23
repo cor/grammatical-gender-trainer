@@ -149,7 +149,8 @@
                                 <rect key="frame" x="0.0" y="101" width="600" height="499"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auj-Sz-QqS">
-                                        <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                        <rect key="frame" x="20" y="20" width="560" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Start">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -157,22 +158,20 @@
                                             <action selector="startButtonPressed" destination="BFX-wD-hjK" eventType="touchUpInside" id="0aT-EU-rxj"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQ6-1U-b1B">
-                                        <rect key="frame" x="20" y="68" width="560" height="423"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fWT-vU-cT2">
+                                        <rect key="frame" x="0.0" y="90" width="600" height="409"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hQ6-1U-b1B" secondAttribute="trailing" constant="20" id="0cd-rP-6xJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Auj-Sz-QqS" secondAttribute="trailing" constant="20" symbolic="YES" id="46G-6G-ZXk"/>
-                                    <constraint firstItem="hQ6-1U-b1B" firstAttribute="leading" secondItem="wsX-A4-Pzk" secondAttribute="leading" constant="20" id="DwW-22-qSv"/>
+                                    <constraint firstItem="fWT-vU-cT2" firstAttribute="leading" secondItem="wsX-A4-Pzk" secondAttribute="leading" id="G9n-mO-Ar2"/>
                                     <constraint firstItem="Auj-Sz-QqS" firstAttribute="leading" secondItem="wsX-A4-Pzk" secondAttribute="leading" constant="20" symbolic="YES" id="JTT-CT-haI"/>
-                                    <constraint firstItem="hQ6-1U-b1B" firstAttribute="top" secondItem="Auj-Sz-QqS" secondAttribute="bottom" constant="18" id="WMg-Zk-OtJ"/>
                                     <constraint firstItem="Auj-Sz-QqS" firstAttribute="top" secondItem="wsX-A4-Pzk" secondAttribute="top" constant="20" symbolic="YES" id="dvB-C6-YVS"/>
-                                    <constraint firstAttribute="bottom" secondItem="hQ6-1U-b1B" secondAttribute="bottom" constant="8" id="fHj-Sl-oGn"/>
+                                    <constraint firstItem="fWT-vU-cT2" firstAttribute="top" secondItem="Auj-Sz-QqS" secondAttribute="bottom" constant="24" id="esO-9n-Rmr"/>
+                                    <constraint firstAttribute="bottom" secondItem="fWT-vU-cT2" secondAttribute="bottom" id="x2m-dJ-Xjf"/>
+                                    <constraint firstAttribute="width" secondItem="fWT-vU-cT2" secondAttribute="width" id="yk6-9m-TqA"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -224,7 +223,6 @@
                         <outlet property="scoreLabel" destination="Wae-QN-zL8" id="HDL-U9-x06"/>
                         <outlet property="splashView" destination="wsX-A4-Pzk" id="2Wl-JO-Ess"/>
                         <outlet property="timeLabel" destination="Xgw-sf-rek" id="iOH-N2-GpN"/>
-                        <outlet property="wordsView" destination="hQ6-1U-b1B" id="poU-4T-CWb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1E-gP-VKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -232,4 +230,5 @@
             <point key="canvasLocation" x="1209" y="237"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.47309985055163839" green="1" blue="0.38137177010837831" alpha="1" colorSpace="calibratedRGB"/>
 </document>
