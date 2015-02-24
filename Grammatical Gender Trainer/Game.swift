@@ -19,8 +19,20 @@ class Game {
     var startTime : NSDate?
     var endTime : NSDate?
     
-    var remainingWords: Int {
+    var remainingWordsInRound: Int {
         return roundStack[currentRound].remainingWords
+    }
+    
+    var remainingRounds: Int {
+        return roundStack.count - currentRound
+    }
+    
+    var remainingWordsTotal: Int {
+        var total = 0
+        for i in 0...remainingRounds {
+            total += roundStack[currentRound + i].remainingWords
+        }
+        return total
     }
     
     // MARK: - Data Properties

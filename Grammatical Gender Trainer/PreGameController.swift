@@ -50,6 +50,8 @@ class PreGameController: UIViewController, UITableViewDataSource, UITableViewDel
         case let gameController as GameController:
             // TODO: do stuff
             println("wooohoo")
+            gameController.words = words
+            gameController.game = game
         default: break;
         }
         
