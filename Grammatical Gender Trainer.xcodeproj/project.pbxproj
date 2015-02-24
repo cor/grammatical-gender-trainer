@@ -10,7 +10,9 @@
 		877A30331A84F341001FA406 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877A30321A84F341001FA406 /* GameRound.swift */; };
 		877A30361A84F6D4001FA406 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877A30351A84F6D4001FA406 /* ArrayExtension.swift */; };
 		87A396D21A83E0BD008EF080 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A396D11A83E0BD008EF080 /* Game.swift */; };
-		AF0BF43E1A82975200C78C69 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BF43D1A82975200C78C69 /* GameController.swift */; };
+		87EAD9001A9CE1090048ABD7 /* WordCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD8FF1A9CE1090048ABD7 /* WordCellView.swift */; };
+		87EAD9021A9D02870048ABD7 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD9011A9D02870048ABD7 /* GameController.swift */; };
+		AF0BF43E1A82975200C78C69 /* PreGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BF43D1A82975200C78C69 /* PreGameController.swift */; };
 		AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */; };
 		AF89C6ED1A800E3B0011E38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EC1A800E3B0011E38E /* AppDelegate.swift */; };
 		AF89C6EF1A800E3B0011E38E /* GroupListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89C6EE1A800E3B0011E38E /* GroupListController.swift */; };
@@ -48,7 +50,9 @@
 		877A30321A84F341001FA406 /* GameRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
 		877A30351A84F6D4001FA406 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		87A396D11A83E0BD008EF080 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		AF0BF43D1A82975200C78C69 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		87EAD8FF1A9CE1090048ABD7 /* WordCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCellView.swift; sourceTree = "<group>"; };
+		87EAD9011A9D02870048ABD7 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		AF0BF43D1A82975200C78C69 /* PreGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreGameController.swift; sourceTree = "<group>"; };
 		AF14EFB31A814C7600950B49 /* WrtsParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrtsParserDelegate.swift; sourceTree = "<group>"; };
 		AF89C6E71A800E3B0011E38E /* Grammatical Gender Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grammatical Gender Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF89C6EB1A800E3B0011E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,8 +142,9 @@
 		87A396CF1A834C7F008EF080 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				87EAD9011A9D02870048ABD7 /* GameController.swift */,
 				AF89C6EE1A800E3B0011E38E /* GroupListController.swift */,
-				AF0BF43D1A82975200C78C69 /* GameController.swift */,
+				AF0BF43D1A82975200C78C69 /* PreGameController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				AF89C6F01A800E3B0011E38E /* Main.storyboard */,
+				87EAD8FF1A9CE1090048ABD7 /* WordCellView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -318,14 +324,16 @@
 				AF89C7211A80AD880011E38E /* WrtsListXml.swift in Sources */,
 				AF89C7191A8011A60011E38E /* WrtsSource.swift in Sources */,
 				AFEB16B91A80BBB1001AB439 /* WrtsConnection.swift in Sources */,
+				87EAD9021A9D02870048ABD7 /* GameController.swift in Sources */,
 				877A30331A84F341001FA406 /* GameRound.swift in Sources */,
 				AF89C71B1A8013620011E38E /* SimpleGroup.swift in Sources */,
 				AF89C71D1A8014370011E38E /* WrtsUserData.swift in Sources */,
 				AF89C7171A8010520011E38E /* Gender.swift in Sources */,
+				87EAD9001A9CE1090048ABD7 /* WordCellView.swift in Sources */,
 				AF89C7231A80ADCB0011E38E /* SimpleWord.swift in Sources */,
 				AF14EFB41A814C7600950B49 /* WrtsParserDelegate.swift in Sources */,
 				AFD72EE61A841503004BC7FE /* WrtsConnectionDelegate.swift in Sources */,
-				AF0BF43E1A82975200C78C69 /* GameController.swift in Sources */,
+				AF0BF43E1A82975200C78C69 /* PreGameController.swift in Sources */,
 				AF89C7111A800F450011E38E /* Group.swift in Sources */,
 				AF89C71F1A80ACC60011E38E /* WrtsList.swift in Sources */,
 				AF89C70D1A800E870011E38E /* List.swift in Sources */,

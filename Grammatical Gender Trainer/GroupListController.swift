@@ -89,10 +89,10 @@ class GroupListController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.destinationViewController {
-        case let gameController as GameController:
+        case let preGameController as PreGameController:
             if let selectedList = self.selectedList {
-                gameController.words = selectedList.words
-                gameController.title = selectedList.name
+                preGameController.words = selectedList.words
+                preGameController.title = selectedList.name
             }
         default: break;
         }
