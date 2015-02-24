@@ -212,16 +212,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-Gp-vDt" userLabel="Stats View">
-                                <rect key="frame" x="16" y="64" width="568" height="46"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="46"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHk-XQ-Wr8" userLabel="Words Left View">
-                                        <rect key="frame" x="8" y="8" width="552" height="30"/>
+                                        <rect key="frame" x="8" y="8" width="584" height="30"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="DJb-4i-ODy">
-                                                <rect key="frame" x="8" y="13" width="452" height="2"/>
+                                                <rect key="frame" x="8" y="13" width="484" height="2"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="words left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yF-QU-jnz">
-                                                <rect key="frame" x="468" y="3" width="76" height="21"/>
+                                                <rect key="frame" x="500" y="3" width="76" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -248,13 +248,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSF-Ad-kZt" userLabel="Answer Buttons View">
-                                <rect key="frame" x="16" y="341" width="568" height="215"/>
+                                <rect key="frame" x="0.0" y="351" width="600" height="205"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5z-eL-MEv" userLabel="Feminine">
-                                        <rect key="frame" x="195" y="8" width="178" height="199"/>
+                                        <rect key="frame" x="205" y="8" width="190" height="189"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHN-Jz-Xsn" userLabel="Feminine Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="178" height="199"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="189"/>
                                                 <state key="normal" title="die">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -271,10 +271,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4U-ic-9Dz" userLabel="Neuter">
-                                        <rect key="frame" x="381" y="8" width="179" height="199"/>
+                                        <rect key="frame" x="403" y="8" width="189" height="189"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jl-MK-e7e" userLabel="Neuter Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="179" height="199"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="189" height="189"/>
                                                 <state key="normal" title="das">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -291,10 +291,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwi-Z4-2V3" userLabel="Masculine">
-                                        <rect key="frame" x="8" y="8" width="179" height="199"/>
+                                        <rect key="frame" x="8" y="8" width="189" height="189"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJO-Mr-elv" userLabel="Masculine Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="179" height="199"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="189" height="189"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mJO-Mr-elv" secondAttribute="height" id="Wmy-02-v5X"/>
+                                                </constraints>
                                                 <state key="normal" title="der">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -328,10 +331,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTN-JZ-SgF" userLabel="Current Word View">
-                                <rect key="frame" x="16" y="118" width="568" height="215"/>
+                                <rect key="frame" x="0.0" y="118" width="600" height="225"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuB-WF-ho8">
-                                        <rect key="frame" x="233" y="97" width="103" height="21"/>
+                                        <rect key="frame" x="249" y="102" width="103" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -346,17 +349,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="xSF-Ad-kZt" secondAttribute="trailing" id="1cy-Pk-zVH"/>
                             <constraint firstItem="tS7-Gp-vDt" firstAttribute="top" secondItem="ECf-q7-EVd" secondAttribute="bottom" id="8Es-8k-74d"/>
                             <constraint firstItem="xSF-Ad-kZt" firstAttribute="top" secondItem="nTN-JZ-SgF" secondAttribute="bottom" constant="8" id="HC4-Ni-eGE"/>
-                            <constraint firstItem="xSF-Ad-kZt" firstAttribute="height" secondItem="nTN-JZ-SgF" secondAttribute="height" id="J5f-wg-zXg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nTN-JZ-SgF" secondAttribute="trailing" id="Qps-pc-PsD"/>
-                            <constraint firstItem="xSF-Ad-kZt" firstAttribute="leading" secondItem="zMd-C6-mnL" secondAttribute="leadingMargin" id="Shr-bt-Ii4"/>
-                            <constraint firstItem="PEZ-2i-y1n" firstAttribute="top" secondItem="xSF-Ad-kZt" secondAttribute="bottom" id="XyJ-yG-Q5J"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tS7-Gp-vDt" secondAttribute="trailing" id="ckk-HC-ELW"/>
-                            <constraint firstItem="nTN-JZ-SgF" firstAttribute="leading" secondItem="zMd-C6-mnL" secondAttribute="leadingMargin" id="ino-LO-lB5"/>
+                            <constraint firstItem="tS7-Gp-vDt" firstAttribute="leading" secondItem="zMd-C6-mnL" secondAttribute="leading" id="JRP-nz-SzO"/>
+                            <constraint firstAttribute="trailing" secondItem="tS7-Gp-vDt" secondAttribute="trailing" id="NIe-qj-LwO"/>
+                            <constraint firstAttribute="trailing" secondItem="nTN-JZ-SgF" secondAttribute="trailing" id="Qps-pc-PsD"/>
+                            <constraint firstAttribute="trailing" secondItem="xSF-Ad-kZt" secondAttribute="trailing" id="RR7-k4-vxU"/>
+                            <constraint firstItem="xSF-Ad-kZt" firstAttribute="leading" secondItem="zMd-C6-mnL" secondAttribute="leading" id="Shr-bt-Ii4"/>
+                            <constraint firstItem="PEZ-2i-y1n" firstAttribute="top" secondItem="xSF-Ad-kZt" secondAttribute="bottom" id="deZ-cd-jmg"/>
+                            <constraint firstItem="nTN-JZ-SgF" firstAttribute="leading" secondItem="zMd-C6-mnL" secondAttribute="leading" id="ino-LO-lB5"/>
                             <constraint firstItem="nTN-JZ-SgF" firstAttribute="top" secondItem="tS7-Gp-vDt" secondAttribute="bottom" constant="8" id="qyD-ju-dCD"/>
-                            <constraint firstItem="tS7-Gp-vDt" firstAttribute="leading" secondItem="zMd-C6-mnL" secondAttribute="leadingMargin" id="yMe-CT-MG3"/>
                         </constraints>
                     </view>
                 </viewController>
