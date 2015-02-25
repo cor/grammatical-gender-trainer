@@ -313,7 +313,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.47309985059999998" green="1" blue="0.38137177010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="KuB-WF-ho8" secondAttribute="centerY" id="P6x-94-qr5"/>
                                     <constraint firstAttribute="centerX" secondItem="KuB-WF-ho8" secondAttribute="centerX" constant="-0.5" id="yA2-zJ-DfX"/>
@@ -408,6 +408,7 @@
                     </view>
                     <connections>
                         <outlet property="currentWordLabel" destination="KuB-WF-ho8" id="kR3-4g-IW5"/>
+                        <outlet property="currentWordView" destination="nTN-JZ-SgF" id="2C3-JV-6nE"/>
                         <outlet property="remainingRoundsLabel" destination="DJI-0b-lPr" id="eMg-en-thv"/>
                         <outlet property="remainingWordsLabel" destination="0yF-QU-jnz" id="b10-WS-0tN"/>
                         <outlet property="scoreLabel" destination="3G7-xH-Qyf" id="nB3-3I-hR7"/>

@@ -90,13 +90,14 @@ class Game {
         }
     }
     
-    func answer(answer: Gender) {
+    func answer(answer: Gender) -> Bool {
         if currentWord != nil {
             
             // check if the answer is correct
             if answer == currentWord!.gender {
                 score++
                 nextWord()
+                return true
             } else {
                 
                 // create a new GameRound if ther isn't a next round available
@@ -108,9 +109,11 @@ class Game {
                 roundStack[currentRound + 1].addWord(currentWord!)
                 score--
                 nextWord()
+                return false
             }
             
         }
+        return false
     }
     
     // TODO: this method

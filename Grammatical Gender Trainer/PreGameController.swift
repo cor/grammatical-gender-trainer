@@ -40,10 +40,7 @@ class PreGameController: UIViewController, UITableViewDataSource, UITableViewDel
         game = Game(words: words)
         title = gameTitle
         
-//        updateDisplay()
-        
     }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.destinationViewController {
@@ -57,41 +54,6 @@ class PreGameController: UIViewController, UITableViewDataSource, UITableViewDel
         
     }
     
-    
-    // MARK: Input
-//    @IBAction func genderButtonPressed(sender: UIButton) {
-//        
-//        // use the button's Restoration ID to get the Gender and use the Game model's answer function
-//        if let identifier = sender.restorationIdentifier {
-//            switch identifier {
-//            case "Masculine": game.answer(Gender.Masculine)
-//            case "Feminine": game.answer(Gender.Feminine)
-//            case "Neuter": game.answer(Gender.Neuter)
-//            default: println("ERROR: invalid Restoration Identifier")
-//            }
-//            
-//            // this should be replaced by a delegate
-//            if game.running == false {
-//                state = .Result
-//            }
-//            
-//            updateDisplay()
-//        }
-//    }
-    
-//    @IBAction func startButtonPressed() {
-//        
-//        state = .Game
-//        
-//        game.start()
-//        updateDisplay()
-//        
-//        // update the timer label 10 times per second second
-//        NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateTimeLabel"), userInfo: nil, repeats: true)
-//        
-//    }
-    
-    
     // MARK: TableView methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return game.wordSource.count
@@ -104,80 +66,4 @@ class PreGameController: UIViewController, UITableViewDataSource, UITableViewDel
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
-    
-    
-    // MARK: Update methods
-//    func updateDisplay() {
-//        
-//        switch state {
-//        case .Initial:
-//            
-////            hideGenderButtons(true)
-////            hideStatLabels(true)
-//            
-//            currentWordLabel.hidden = true
-//            splashView.hidden = false
-//            
-//        case .Game:
-//            
-//            if game.currentWord != nil {
-//                
-//                // update currentWord label
-//                currentWordLabel.text = game.currentWord?.word
-//                
-//                // update answer buttons
-//                masculineButton.setTitle(game.currentWord!.language.genderName(Gender.Masculine), forState: UIControlState.Normal)
-//                feminineButton.setTitle(game.currentWord!.language.genderName(Gender.Feminine), forState: UIControlState.Normal)
-//                neuterButton.setTitle(game.currentWord!.language.genderName(Gender.Neuter), forState: UIControlState.Normal)
-//            }
-//
-////            hideGenderButtons(false)
-////            hideStatLabels(false)
-//            
-//            currentWordLabel.hidden = false
-//            splashView.hidden = true
-//            
-//        case .Result:
-//            
-//            hideStatLabels(false)
-//            hideGenderButtons(true)
-//            
-//            currentWordLabel.hidden = true
-//            splashView.hidden = false
-//        }
-//        
-//        roundLabel.text = "\(game.currentRound)"
-//        scoreLabel.text = "\(game.score)"
-//    }
-//    
-//    // MARK: Hide/show functions
-////    func hideGenderButtons(hidden: Bool) {
-////        masculineButton.hidden = hidden
-////        feminineButton.hidden = hidden
-////        neuterButton.hidden = hidden
-////    }
-//    
-////    func hideStatLabels(hidden: Bool) {
-////        roundLabel.hidden = hidden
-////        timeLabel.hidden = hidden
-////        scoreLabel.hidden = hidden
-////    }
-//    
-//    
-//    
-//    func updateTimeLabel() {
-//        timeLabel.text = String(format: timeFormat(), game.time())
-//        
-//    }
-//
-//    func timeFormat() -> String {
-//        switch state {
-//        case .Result: return "%.2f"
-//        default: return "%.1f"
-//        }
-//    }
-//    
 }
