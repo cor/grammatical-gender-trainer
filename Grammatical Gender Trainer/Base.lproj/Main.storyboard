@@ -211,42 +211,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-Gp-vDt" userLabel="Stats View">
-                                <rect key="frame" x="0.0" y="64" width="600" height="46"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHk-XQ-Wr8" userLabel="Words Left View">
-                                        <rect key="frame" x="8" y="8" width="584" height="30"/>
-                                        <subviews>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="DJb-4i-ODy">
-                                                <rect key="frame" x="8" y="13" width="484" height="2"/>
-                                            </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="words left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yF-QU-jnz">
-                                                <rect key="frame" x="500" y="3" width="76" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="DJb-4i-ODy" firstAttribute="leading" secondItem="BHk-XQ-Wr8" secondAttribute="leading" constant="8" id="9Gz-ZN-esa"/>
-                                            <constraint firstItem="DJb-4i-ODy" firstAttribute="top" secondItem="BHk-XQ-Wr8" secondAttribute="top" constant="13" id="DbT-Sd-HP6"/>
-                                            <constraint firstAttribute="trailing" secondItem="0yF-QU-jnz" secondAttribute="trailing" constant="8" id="IS0-gg-ga3"/>
-                                            <constraint firstAttribute="bottom" secondItem="DJb-4i-ODy" secondAttribute="bottom" constant="15" id="aeK-Vh-EWI"/>
-                                            <constraint firstAttribute="bottom" secondItem="0yF-QU-jnz" secondAttribute="bottom" constant="6" id="bOU-oP-7jk"/>
-                                            <constraint firstItem="0yF-QU-jnz" firstAttribute="leading" secondItem="DJb-4i-ODy" secondAttribute="trailing" constant="8" id="gHO-xi-YVx"/>
-                                            <constraint firstItem="0yF-QU-jnz" firstAttribute="top" secondItem="BHk-XQ-Wr8" secondAttribute="top" constant="3" id="xM3-TZ-yAO"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.92167983698154421" blue="0.27584750637946642" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="BHk-XQ-Wr8" firstAttribute="top" secondItem="tS7-Gp-vDt" secondAttribute="top" constant="8" id="8Ng-29-tIj"/>
-                                    <constraint firstAttribute="bottom" secondItem="BHk-XQ-Wr8" secondAttribute="bottom" constant="8" id="adg-eQ-6fB"/>
-                                    <constraint firstAttribute="trailing" secondItem="BHk-XQ-Wr8" secondAttribute="trailing" constant="8" id="dDy-oN-aQM"/>
-                                    <constraint firstItem="BHk-XQ-Wr8" firstAttribute="leading" secondItem="tS7-Gp-vDt" secondAttribute="leading" constant="8" id="iHq-Mr-okm"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSF-Ad-kZt" userLabel="Answer Buttons View">
                                 <rect key="frame" x="0.0" y="351" width="600" height="205"/>
                                 <subviews>
@@ -340,10 +304,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTN-JZ-SgF" userLabel="Current Word View">
-                                <rect key="frame" x="0.0" y="110" width="600" height="241"/>
+                                <rect key="frame" x="0.0" y="148" width="600" height="203"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuB-WF-ho8">
-                                        <rect key="frame" x="249" y="110" width="103" height="21"/>
+                                        <rect key="frame" x="249" y="91" width="103" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -353,6 +317,78 @@
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="KuB-WF-ho8" secondAttribute="centerY" id="P6x-94-qr5"/>
                                     <constraint firstAttribute="centerX" secondItem="KuB-WF-ho8" secondAttribute="centerX" constant="-0.5" id="yA2-zJ-DfX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-Gp-vDt" userLabel="Stats View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="84"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHk-XQ-Wr8" userLabel="Words Left View">
+                                        <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="DJb-4i-ODy">
+                                                <rect key="frame" x="8" y="13" width="550" height="2"/>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yF-QU-jnz">
+                                                <rect key="frame" x="566" y="3" width="10" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="DJb-4i-ODy" firstAttribute="leading" secondItem="BHk-XQ-Wr8" secondAttribute="leading" constant="8" id="9Gz-ZN-esa"/>
+                                            <constraint firstItem="DJb-4i-ODy" firstAttribute="top" secondItem="BHk-XQ-Wr8" secondAttribute="top" constant="13" id="DbT-Sd-HP6"/>
+                                            <constraint firstAttribute="trailing" secondItem="0yF-QU-jnz" secondAttribute="trailing" constant="8" id="IS0-gg-ga3"/>
+                                            <constraint firstAttribute="bottom" secondItem="DJb-4i-ODy" secondAttribute="bottom" constant="15" id="aeK-Vh-EWI"/>
+                                            <constraint firstAttribute="bottom" secondItem="0yF-QU-jnz" secondAttribute="bottom" constant="6" id="bOU-oP-7jk"/>
+                                            <constraint firstItem="0yF-QU-jnz" firstAttribute="leading" secondItem="DJb-4i-ODy" secondAttribute="trailing" constant="8" id="gHO-xi-YVx"/>
+                                            <constraint firstItem="0yF-QU-jnz" firstAttribute="top" secondItem="BHk-XQ-Wr8" secondAttribute="top" constant="3" id="xM3-TZ-yAO"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLA-WU-vgh">
+                                        <rect key="frame" x="8" y="46" width="584" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G7-xH-Qyf">
+                                                <rect key="frame" x="556" y="4" width="20" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMn-q1-57p">
+                                                <rect key="frame" x="275" y="4" width="34" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-0b-lPr">
+                                                <rect key="frame" x="8" y="4" width="25" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerY" secondItem="3G7-xH-Qyf" secondAttribute="centerY" constant="0.5" id="99K-OS-b56"/>
+                                            <constraint firstAttribute="centerY" secondItem="DJI-0b-lPr" secondAttribute="centerY" constant="0.5" id="Cxy-0f-z0w"/>
+                                            <constraint firstItem="DJI-0b-lPr" firstAttribute="leading" secondItem="iLA-WU-vgh" secondAttribute="leading" constant="8" id="GbV-MG-vDZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="3G7-xH-Qyf" secondAttribute="trailing" constant="8" id="XbR-9w-LhE"/>
+                                            <constraint firstAttribute="centerY" secondItem="cMn-q1-57p" secondAttribute="centerY" constant="0.5" id="kJ3-2z-r5a"/>
+                                            <constraint firstAttribute="centerX" secondItem="cMn-q1-57p" secondAttribute="centerX" id="wcv-N0-bvT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.92167983698154421" blue="0.27584750637946642" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iLA-WU-vgh" firstAttribute="top" secondItem="BHk-XQ-Wr8" secondAttribute="bottom" constant="8" id="6J1-Fi-Ghz"/>
+                                    <constraint firstItem="BHk-XQ-Wr8" firstAttribute="top" secondItem="tS7-Gp-vDt" secondAttribute="top" constant="8" id="8Ng-29-tIj"/>
+                                    <constraint firstAttribute="bottom" secondItem="iLA-WU-vgh" secondAttribute="bottom" constant="8" id="OaM-1p-EAV"/>
+                                    <constraint firstAttribute="trailing" secondItem="BHk-XQ-Wr8" secondAttribute="trailing" constant="8" id="dDy-oN-aQM"/>
+                                    <constraint firstAttribute="trailing" secondItem="iLA-WU-vgh" secondAttribute="trailing" constant="8" id="eaU-EF-hA7"/>
+                                    <constraint firstItem="BHk-XQ-Wr8" firstAttribute="leading" secondItem="tS7-Gp-vDt" secondAttribute="leading" constant="8" id="iHq-Mr-okm"/>
+                                    <constraint firstItem="iLA-WU-vgh" firstAttribute="height" secondItem="BHk-XQ-Wr8" secondAttribute="height" id="rCu-Zh-jxW"/>
+                                    <constraint firstItem="iLA-WU-vgh" firstAttribute="leading" secondItem="tS7-Gp-vDt" secondAttribute="leading" constant="8" id="zB2-sE-E33"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -372,6 +408,10 @@
                     </view>
                     <connections>
                         <outlet property="currentWordLabel" destination="KuB-WF-ho8" id="kR3-4g-IW5"/>
+                        <outlet property="remainingRoundsLabel" destination="DJI-0b-lPr" id="eMg-en-thv"/>
+                        <outlet property="remainingWordsLabel" destination="0yF-QU-jnz" id="b10-WS-0tN"/>
+                        <outlet property="scoreLabel" destination="3G7-xH-Qyf" id="nB3-3I-hR7"/>
+                        <outlet property="timeRunningLabel" destination="cMn-q1-57p" id="cZK-Nw-tnS"/>
                         <outlet property="wordProgressBar" destination="DJb-4i-ODy" id="5E0-KH-WBT"/>
                     </connections>
                 </viewController>
