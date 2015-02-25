@@ -62,8 +62,6 @@ class Game {
         
         roundStack.append(GameRound(wordStack: wordSource.shuffled()))
         
-        println(roundStack[currentRound])
-        
         nextWord()
     }
     
@@ -90,14 +88,14 @@ class Game {
         }
     }
     
-    func answer(answer: Gender) -> Bool {
+    func answer(answer: Gender) -> (correct: Bool, correctGender: Gender) {
         if currentWord != nil {
             
             // check if the answer is correct
             if answer == currentWord!.gender {
                 score++
                 nextWord()
-                return true
+                return (true, answer)
             } else {
                 
                 // create a new GameRound if ther isn't a next round available
@@ -108,12 +106,15 @@ class Game {
                 // add the incorrect word to the next round
                 roundStack[currentRound + 1].addWord(currentWord!)
                 score--
+                let correctAnswer = currentWord!.gender
                 nextWord()
-                return false
+                return (false, correctAnswer)
             }
             
         }
-        return false
+        
+        println("ERROR AT ANSWER")
+        return (false, Gender.Neuter)
     }
     
     // TODO: this method

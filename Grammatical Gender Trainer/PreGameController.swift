@@ -45,8 +45,6 @@ class PreGameController: UIViewController, UITableViewDataSource, UITableViewDel
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.destinationViewController {
         case let gameController as GameController:
-            // TODO: do stuff
-            println("wooohoo")
             gameController.words = words
             gameController.game = game
         default: break;
