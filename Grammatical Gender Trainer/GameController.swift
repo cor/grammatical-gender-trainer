@@ -82,13 +82,13 @@ class GameController: UIViewController {
                     switch result.correctGender {
                     case .Masculine:
                         self.masculineButton.backgroundColor = self.feedbackColors[true]
-                        self.masculineButton.backgroundColor = UIColor.whiteColor()
+                        self.masculineButton.backgroundColor = UIColor(hex: 0x251191, alpha: 1)
                     case .Feminine:
                         self.feminineButton.backgroundColor = self.feedbackColors[true]
-                        self.feminineButton.backgroundColor = UIColor.whiteColor()
+                        self.feminineButton.backgroundColor = UIColor(hex: 0xDD32AF, alpha: 1)
                     case .Neuter:
                         self.neuterButton.backgroundColor = self.feedbackColors[true]
-                        self.neuterButton.backgroundColor = UIColor.whiteColor()
+                        self.neuterButton.backgroundColor = UIColor(hex: 0xE8E0C7, alpha: 1)
                     }
                     
                 }

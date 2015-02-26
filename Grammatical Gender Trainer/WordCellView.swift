@@ -20,13 +20,13 @@ class WordCellView : UITableViewCell {
             // set colors based on gender
             switch word.gender {
             case .Masculine:
-                genderLabel.backgroundColor = UIColor.blackColor()
+                genderLabel.backgroundColor = UIColor(hex: 0x251191, alpha: 1)
                 genderLabel.textColor = UIColor.whiteColor()
             case .Feminine:
-                genderLabel.backgroundColor = UIColor.redColor()
-                genderLabel.textColor = UIColor.blackColor()
+                genderLabel.backgroundColor = UIColor(hex: 0xDD32AF, alpha: 1)
+                genderLabel.textColor = UIColor.whiteColor()
             case .Neuter:
-                genderLabel.backgroundColor = UIColor.yellowColor()
+                genderLabel.backgroundColor = UIColor(hex: 0xE8E0C7, alpha: 1)
                 genderLabel.textColor = UIColor.blackColor()
             }
             
